@@ -7,5 +7,6 @@ export const routes: Routes = [
   { path: 'portfolio', loadComponent: () => import('./components/portfolio/portfolio.component').then(m => m.PortfolioComponent) },
   { path: 'blog', loadComponent: () => import('./components/blog/blog.component').then(m => m.BlogComponent) },
   { path: 'contact', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) },
+  { path: 'task-manager', loadComponent: () => import('./components/task-manager/task-manager.component').then(m => m.TaskManagerComponent) },
   { path: '**', redirectTo: '' }
 ];

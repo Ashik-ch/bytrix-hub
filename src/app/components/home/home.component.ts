@@ -45,7 +45,7 @@ export class HomeComponent {
 
   testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Sarah',
       company: 'TechStart Inc.',
       role: 'CEO',
       content: 'Bytrix transformed our digital presence completely. Our website traffic increased by 300% in just 6 months!',

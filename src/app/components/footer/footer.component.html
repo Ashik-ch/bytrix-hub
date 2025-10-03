@@ -1,0 +1,105 @@
+<footer class="bg-gray-900 text-white">
+  <div class="container-custom">
+    <!-- Main Footer Content -->
+    <div class="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div class="lg:col-span-1">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold gradient-text mb-4">Bytrix</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Where Creativity Meets Technology. We build brands and digital experiences that drive growth and success for
+            businesses worldwide.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer"
+            class="w-10 h-10 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+            <i [class]="social.icon" class="text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+        <ul class="space-y-3">
+          <li *ngFor="let link of quickLinks">
+            <a [routerLink]="link.route" class="text-gray-300 hover:text-white transition-colors duration-300">
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li *ngFor="let service of services">
+            <a [routerLink]="service.route" class="text-gray-300 hover:text-white transition-colors duration-300">
+              {{ service.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6">Get In Touch</h4>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <i class="fas fa-map-marker-alt text-primary-500 mt-1"></i>
+            <p class="text-gray-300">
+              123 Business Street<br>
+              City, State 12345
+            </p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-phone text-primary-500"></i>
+            <a href="tel:+1234567890" class="text-gray-300 hover:text-white transition-colors duration-300">
+              +1 (234) 567-890
+            </a>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-primary-500"></i>
+            <!-- <a href="mailto:hello@bytrix.com" class="text-gray-300 hover:text-white transition-colors duration-300">
+              hello@bytrix.com
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="py-8 border-t border-gray-800">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0">
+          <h4 class="text-lg font-semibold mb-2">Stay Updated</h4>
+          <p class="text-gray-300">Get the latest digital marketing tips and insights delivered to your inbox.</p>
+        </div>
+        <div class="flex w-full md:w-auto">
+          <input type="email" placeholder="Enter your email"
+            class="flex-1 md:w-64 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-400">
+          <button
+            class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-r-lg transition-colors duration-300">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="py-6 border-t border-gray-800">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          © {{ currentYear }} Bytrix. All rights reserved.
+        </p>
+        <div class="flex space-x-6 text-sm">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

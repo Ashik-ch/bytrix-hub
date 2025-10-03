@@ -1,0 +1,174 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-primary-50 to-accent-50 section-padding">
+  <div class="container-custom">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl font-bold text-gray-900 mb-6 fade-in">
+        Our <span class="gradient-text">Services</span>
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed fade-in">
+        Comprehensive digital marketing solutions designed to help your business grow, 
+        reach more customers, and achieve your goals in the digital landscape.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">What We Offer</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Choose from our comprehensive range of digital marketing services, 
+        or combine multiple services for a complete marketing solution.
+      </p>
+    </div>
+    
+    <!-- Service Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button *ngFor="let service of services" 
+              (click)="selectService(service)"
+              [class]="selectedService.id === service.id ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
+              class="px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+        {{ service.title }}
+      </button>
+    </div>
+
+    <!-- Selected Service Details -->
+    <div class="card p-8 mb-16 fade-in">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+              <i [class]="selectedService.icon" class="text-primary-600 text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold text-gray-900">{{ selectedService.title }}</h3>
+              <p class="text-primary-600 font-medium">{{ selectedService.subtitle }}</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
+            {{ selectedService.description }}
+          </p>
+          <div class="flex items-center space-x-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary-600">{{ selectedService.pricing.starting }}</div>
+              <div class="text-gray-500">Starting {{ selectedService.pricing.period }}</div>
+            </div>
+            <a routerLink="/contact" class="btn-primary">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="slide-up">
+          <img [src]="selectedService.image" 
+               [alt]="selectedService.title" 
+               class="rounded-2xl shadow-2xl w-full">
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Features -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <div *ngFor="let feature of selectedService.features; let i = index" 
+           class="text-center fade-in"
+           [style.animation-delay]="(i * 0.1) + 's'">
+        <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i [class]="feature.icon" class="text-accent-600 text-xl"></i>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-2">{{ feature.title }}</h4>
+        <p class="text-gray-600 text-sm">{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- All Services Grid -->
+<section class="section-padding bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">All Our Services</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Explore our complete range of digital marketing services designed to help your business succeed.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let service of services; let i = index" 
+           class="card p-8 hover-lift fade-in"
+           [style.animation-delay]="(i * 0.1) + 's'">
+        <div class="text-center mb-6">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i [class]="service.icon" class="text-primary-600 text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">{{ service.title }}</h3>
+          <p class="text-primary-600 font-medium mb-4">{{ service.subtitle }}</p>
+          <p class="text-gray-600 text-sm mb-6">{{ service.description }}</p>
+        </div>
+        
+        <div class="space-y-3 mb-6">
+          <div *ngFor="let feature of service.features.slice(0, 3)" class="flex items-center text-sm text-gray-500">
+            <i class="fas fa-check text-accent-500 mr-2"></i>
+            {{ feature.title }}
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary-600 mb-2">{{ service.pricing.starting }}</div>
+          <div class="text-gray-500 text-sm mb-4">Starting {{ service.pricing.period }}</div>
+          <a routerLink="/contact" class="btn-secondary w-full text-center">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        We follow a proven methodology to ensure your project is delivered on time and exceeds expectations.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="text-center fade-in">
+        <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Discovery</h3>
+        <p class="text-gray-600 text-sm">We learn about your business, goals, and challenges to create the perfect strategy.</p>
+      </div>
+      <div class="text-center fade-in">
+        <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Strategy</h3>
+        <p class="text-gray-600 text-sm">We develop a comprehensive plan tailored to your specific needs and objectives.</p>
+      </div>
+      <div class="text-center fade-in">
+        <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Implementation</h3>
+        <p class="text-gray-600 text-sm">Our team executes the strategy with precision and attention to detail.</p>
+      </div>
+      <div class="text-center fade-in">
+        <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Optimization</h3>
+        <p class="text-gray-600 text-sm">We continuously monitor and optimize for better results and ROI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding bg-gradient-to-r from-primary-600 to-accent-600">
+  <div class="container-custom text-center">
+    <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      Let's discuss which services are right for your business and create a custom solution that drives results.
+    </p>
+    <a routerLink="/contact" class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block">
+      Get Free Consultation
+    </a>
+  </div>
+</section>

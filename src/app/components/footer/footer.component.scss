@@ -1,0 +1,44 @@
+// Footer specific styles
+footer {
+  .gradient-text {
+    background: linear-gradient(135deg, #3b82f6, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  // Newsletter input focus
+  input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  // Social icons hover effect
+  .social-icon {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+  }
+
+  // Link hover effects
+  a {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background: linear-gradient(135deg, #3b82f6, #22c55e);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!-- WhatsApp Floating Button -->
+<div class="fixed bottom-6 right-6 z-50" *ngIf="isVisible">
+  <!-- Expanded Menu -->
+  <div *ngIf="isExpanded" class="mb-4 space-y-3">
+    <!-- WhatsApp Button -->
+    <button (click)="openWhatsApp()" 
+            class="flex items-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+      <i class="fab fa-whatsapp text-xl"></i>
+      <span class="font-medium">WhatsApp</span>
+    </button>
+    
+    <!-- Chat Button -->
+    <button (click)="openChat()" 
+            class="flex items-center space-x-3 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+      <i class="fas fa-comments text-xl"></i>
+      <span class="font-medium">Live Chat</span>
+    </button>
+  </div>
+
+  <!-- Main Toggle Button -->
+  <button (click)="toggleExpanded()" 
+          class="w-14 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+    <i *ngIf="!isExpanded" class="fas fa-comments text-xl"></i>
+    <i *ngIf="isExpanded" class="fas fa-times text-xl"></i>
+  </button>
+
+  <!-- Pulse Animation -->
+  <div class="absolute inset-0 bg-primary-600 rounded-full animate-ping opacity-20"></div>
+</div>

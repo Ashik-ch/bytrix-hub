@@ -1,0 +1,87 @@
+<header class="bg-white shadow-lg sticky top-0 z-50">
+  <nav class="container-custom">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a routerLink="/" class="text-2xl font-bold gradient-text">
+        Bytrix &#123;&#125;
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Home
+        </a>
+        <a routerLink="/about" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          About Us
+        </a>
+        <a routerLink="/services" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Services
+        </a>
+        <a routerLink="/portfolio" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Portfolio
+        </a>
+        <a routerLink="/blog" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Blog
+        </a>
+        <a routerLink="/contact" routerLinkActive="text-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Contact
+        </a>
+        <a routerLink="/contact" class="btn-primary">
+          Get Free Consultation
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button (click)="toggleMenu()"
+          class="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+            <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div *ngIf="isMenuOpen" class="md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+        <a routerLink="/" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Home
+        </a>
+        <a routerLink="/about" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          About Us
+        </a>
+        <a routerLink="/services" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Services
+        </a>
+        <a routerLink="/portfolio" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Portfolio
+        </a>
+        <a routerLink="/blog" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Blog
+        </a>
+        <a routerLink="/contact" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
+          Contact
+        </a>
+        <a routerLink="/contact" (click)="closeMenu()" class="block px-3 py-2 btn-primary text-center">
+          Get Free Consultation
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

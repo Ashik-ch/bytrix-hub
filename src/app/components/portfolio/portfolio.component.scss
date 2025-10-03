@@ -1,0 +1,236 @@
+// Portfolio component specific styles
+.parallax-hero {
+  background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(34, 197, 94, 0.8));
+    z-index: 1;
+  }
+  
+  .container-custom {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+// Category filter buttons
+.category-filter {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #3b82f6, #22c55e);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &.active::after {
+    transform: scaleX(1);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Portfolio cards
+.portfolio-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #22c55e);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    .project-image {
+      transform: scale(1.1);
+    }
+    
+    .project-overlay {
+      opacity: 1;
+    }
+  }
+  
+  .project-image {
+    transition: transform 0.5s ease;
+  }
+  
+  .project-overlay {
+    transition: opacity 0.3s ease;
+  }
+}
+
+// Results display
+.results-grid {
+  .result-item {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Technology tags
+.tech-tag {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, #3b82f6, #22c55e);
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+// Case study cards
+.case-study-card {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #22c55e);
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Testimonial cards
+.testimonial-card {
+  position: relative;
+  
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: #e5e7eb;
+    font-family: serif;
+    z-index: 1;
+  }
+  
+  .testimonial-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+    
+    .quote-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+  
+  .quote-icon {
+    transition: all 0.3s ease;
+  }
+}
+
+// Parallax effect for different sections
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .parallax-hero {
+    background-attachment: scroll;
+    min-height: 50vh;
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+  }
+  
+  .category-filter {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Animation delays for staggered effects
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Hover effects for interactive elements
+.interactive-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}

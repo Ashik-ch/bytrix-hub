@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bytrix-website": {
+    "bytrix-hub": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "dist/bytrix-website"
+              "base": "dist/bytrix-hub"
             },
             "index": "src/index.html",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bytrix-website:build:production"
+              "buildTarget": "bytrix-hub:build:production"
             },
             "development": {
-              "buildTarget": "bytrix-website:build:development"
+              "buildTarget": "bytrix-hub:build:development"
             }
           },
           "defaultConfiguration": "development"

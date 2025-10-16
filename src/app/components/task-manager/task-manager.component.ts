@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { AdminLoginComponent } from "./admin-login/admin-login.component";
 
 interface TaskItem {
   id: number;
@@ -16,7 +16,7 @@ interface TaskItem {
 @Component({
   selector: 'app-task-manager',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, AdminLoginComponent],
   templateUrl: './task-manager.component.html',
   styleUrl: './task-manager.component.scss'
 })
@@ -24,15 +24,9 @@ export class TaskManagerComponent implements OnInit {
   isLoggedIn = false;
   loginError = '';
   taskItems: TaskItem[] = [];
-  
-  loginForm: FormGroup;
   taskForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
-    this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  constructor(private fb: FormBuilder,) {
 
     this.taskForm = this.fb.group({
       taskName: ['', Validators.required],
@@ -48,21 +42,13 @@ export class TaskManagerComponent implements OnInit {
     this.initializeDummyData();
   }
 
-  onLogin() {
-    if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
-      if (username === 'admin' && password === '12345') {
-        this.isLoggedIn = true;
-        this.loginError = '';
-      } else {
-        this.loginError = 'Invalid username or password. Please try again.';
-      }
-    }
+  handleLogin(event: any) {
+    this.isLoggedIn = event;
   }
 
   logout() {
     this.isLoggedIn = false;
-    this.loginForm.reset();
+    // this.loginForm.reset();
     this.loginError = '';
   }
 
@@ -72,7 +58,6 @@ export class TaskManagerComponent implements OnInit {
         id: this.taskItems.length + 1,
         ...this.taskForm.value
       };
-      
       this.taskItems.push(newTask);
       this.taskForm.reset();
     }
@@ -81,16 +66,13 @@ export class TaskManagerComponent implements OnInit {
   deadlineAfterStartValidator(form: FormGroup) {
     const startDate = form.get('startDate')?.value;
     const deadline = form.get('deadline')?.value;
-    
     if (startDate && deadline) {
       const start = new Date(startDate);
       const end = new Date(deadline);
-      
       if (end <= start) {
         return { deadlineAfterStart: true };
       }
     }
-    
     return null;
   }
 

@@ -35,46 +35,37 @@ export class AboutComponent {
 
   team = [
     {
-      name: 'Alex Johnson',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face',
+      name: 'Anshid KA',
+      role: 'Business Strategist & Co-Founder', // Handles business strategy, client relations, marketing, SEO
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqvFPqZjPsXJacDm1xViKkRmaF7iXe22HVdQ&s',
       bio: 'Digital marketing expert with 10+ years of experience helping businesses grow online.',
       social: {
-        linkedin: 'https://linkedin.com/in/alexjohnson',
-        twitter: 'https://twitter.com/alexjohnson'
+        linkedin: 'https://linkedin.com/in/anshidka',
+        twitter: 'https://twitter.com/anshidka'
       }
     },
     {
-      name: 'Sarah Chen',
-      role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face',
-      bio: 'Award-winning designer passionate about creating memorable brand experiences.',
+      name: 'Ashik CH',
+      role: 'Tech Lead & Co-Founder', // Handles technical development, web & app design
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQGrQ5zodG5v-g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1699258218399?e=2147483647&v=beta&t=ZJAWLsGQXvW6MEvkHLPuNoFGyG0d2dMc0NMSaJQ8MLE',
+      bio: 'Designer passionate about creating memorable brand experiences through web and app development.',
       social: {
-        linkedin: 'https://linkedin.com/in/sarahchen',
-        instagram: 'https://instagram.com/sarahchen'
+        linkedin: 'https://linkedin.com/in/ashikch',
+        instagram: 'https://instagram.com/_ashik_ch'
       }
     },
     {
-      name: 'Mike Rodriguez',
-      role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
-      bio: 'Full-stack developer specializing in modern web technologies and mobile apps.',
+      name: 'Navas Jan',
+      role: 'Content Head & Co-Founder', // Chief of content creation, social media, copywriting
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifSvnfGb-wqjD8o2-gSnnbxkOfo0VcfX49A&s',
+      bio: 'Content strategist and storyteller crafting compelling narratives for brands.',
       social: {
-        linkedin: 'https://linkedin.com/in/mikerodriguez',
-        github: 'https://github.com/mikerodriguez'
-      }
-    },
-    {
-      name: 'Emily Davis',
-      role: 'SEO Specialist',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
-      bio: 'SEO expert helping businesses improve their search rankings and online visibility.',
-      social: {
-        linkedin: 'https://linkedin.com/in/emilydavis',
-        twitter: 'https://twitter.com/emilydavis'
+        linkedin: 'https://linkedin.com/in/navasjan',
+        github: 'https://github.com/navas_jan'
       }
     }
   ];
+
 
   milestones = [
     {

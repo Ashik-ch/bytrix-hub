@@ -59,8 +59,7 @@
 
 
 <!-- Stats Section -->
-<section class="py-16 bg-white">
-  <!-- decorative blur shapes -->
+<section class="py-16 bg-[url(assets/images/bg1.png)] bg-cover  text-white">
   <div class="container-custom relative z-10">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
       <div *ngFor="let stat of stats" class="group transform transition-all duration-300 hover:scale-105">
@@ -139,13 +138,10 @@
   </div>
 </section>
 <!-- Testimonials Section -->
-<section class="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-  <!-- background glow shapes -->
-  <div class="absolute top-10 left-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-ping"></div>
+<section
+  class="relative py-20 bg-gradient-to-br from-gray-700 md:min-h-screen via-gray-800 to-black text-white overflow-hidden">
 
   <div class="container-custom relative z-10">
-    <!-- Section Heading -->
     <div class="text-center mb-16">
       <h2
         class="text-5xl font-bold tracking-tight bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
@@ -156,7 +152,6 @@
       </p>
     </div>
 
-    <!-- Testimonials Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       <div *ngFor="let testimonial of testimonials; let i = index" class="relative group p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl overflow-hidden cursor-pointer 
         transform transition-all duration-500 hover:-translate-y-3 hover:shadow-pink-500/30"
@@ -195,7 +190,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="relative py-10  bg-[url(assets/images/ctabg1.jpg)] bg-center bg-cover overflow-hidden">
+<section class="relative py-10  bg-[url(assets/images/ctabg1.jpg)] bg-cover overflow-hidden">
   <!-- Background Glow Shapes -->
   <div class="absolute top-0 left-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
   <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-ping"></div>

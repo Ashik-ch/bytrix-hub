@@ -3,7 +3,7 @@ name: Deploy Angular app to GitHub Pages
 on:
   push:
     branches:
-      - main  # deploys automatically when you push to main
+      - main # deploys automatically when you push to main
 
 permissions:
   contents: write
@@ -24,16 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Update base href for GitHub Pages
-        run: |
-          sed -i 's|<base href="/"|<base href="/bytrix-hub/"|' src/index.html
-
       - name: Build Angular project
         run: npm run build
-
-      - name: Restore original base href
-        run: |
-          sed -i 's|<base href="/bytrix-hub/"|<base href="/"|' src/index.html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

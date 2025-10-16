@@ -18,19 +18,19 @@
   <div class="container-custom">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
       <div class="text-center fade-in">
-        <div class="text-4xl font-bold text-primary-600 mb-2">50+</div>
+        <div class="text-4xl font-bold text-primary-600 mb-2" [countUp]="50">+</div>
         <div class="text-gray-600">Projects Completed</div>
       </div>
       <div class="text-center fade-in">
-        <div class="text-4xl font-bold text-primary-600 mb-2">20+</div>
+        <div class="text-4xl font-bold text-primary-600 mb-2" [countUp]="20">+</div>
         <div class="text-gray-600">Happy Clients</div>
       </div>
       <div class="text-center fade-in">
-        <div class="text-4xl font-bold text-primary-600 mb-2">15+</div>
+        <div class="text-4xl font-bold text-primary-600 mb-2" [countUp]="15">+</div>
         <div class="text-gray-600">Industries Served</div>
       </div>
       <div class="text-center fade-in">
-        <div class="text-4xl font-bold text-primary-600 mb-2">99%</div>
+        <div class="text-4xl font-bold text-primary-600 mb-2" [countUp]="100">%</div>
         <div class="text-gray-600">Client Satisfaction</div>
       </div>
     </div>
@@ -46,45 +46,43 @@
         Explore our diverse portfolio of successful projects across different industries and technologies.
       </p>
     </div>
-    
+
     <!-- Category Filter -->
     <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <button *ngFor="let category of categories" 
-              (click)="selectCategory(category.id)"
-              [class]="selectedCategory === category.id ? 'bg-primary-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
-              class="px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-md">
+      <button *ngFor="let category of categories" (click)="selectCategory(category.id)"
+        [class]="selectedCategory === category.id ? 'bg-primary-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+        class="px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-md">
         {{ category.name }}
       </button>
     </div>
 
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div *ngFor="let project of filteredProjects; let i = index" 
-           class="card overflow-hidden hover-lift fade-in"
-           [style.animation-delay]="(i * 0.1) + 's'">
+      <div *ngFor="let project of filteredProjects; let i = index" class="card overflow-hidden hover-lift fade-in"
+        [style.animation-delay]="(i * 0.1) + 's'">
         <!-- Project Image -->
         <div class="relative overflow-hidden">
-          <img [src]="project.image" 
-               [alt]="project.title" 
-               class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <a [href]="project.link" 
-               class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold transform translate-y-4 hover:translate-y-0 transition-transform duration-300">
+          <img [src]="project.image" [alt]="project.title"
+            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <a [href]="project.link"
+              class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold transform translate-y-4 hover:translate-y-0 transition-transform duration-300">
               View Project
             </a>
           </div>
         </div>
-        
+
         <!-- Project Content -->
         <div class="p-6">
           <div class="flex items-center justify-between mb-4">
             <span class="text-sm text-primary-600 font-medium">{{ project.client }}</span>
             <span class="text-sm text-gray-500">{{ project.category }}</span>
           </div>
-          
+
           <h3 class="text-xl font-bold text-gray-900 mb-3">{{ project.title }}</h3>
           <p class="text-gray-600 mb-4">{{ project.description }}</p>
-          
+
           <!-- Results -->
           <div class="grid grid-cols-3 gap-4 mb-4">
             <div *ngFor="let result of project.results | keyvalue" class="text-center">
@@ -92,11 +90,11 @@
               <div class="text-xs text-gray-500">{{ result.key }}</div>
             </div>
           </div>
-          
+
           <!-- Technologies -->
           <div class="flex flex-wrap gap-2">
-            <span *ngFor="let tech of project.technologies" 
-                  class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+            <span *ngFor="let tech of project.technologies"
+              class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
               {{ tech }}
             </span>
           </div>
@@ -115,21 +113,20 @@
         Deep dive into some of our most successful projects and learn about the strategies that drove results.
       </p>
     </div>
-    
+
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Case Study 1 -->
       <div class="card p-8 hover-lift fade-in">
         <div class="relative mb-6">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop" 
-               alt="E-commerce Case Study" 
-               class="w-full h-48 object-cover rounded-lg">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=300&fit=crop"
+            alt="E-commerce Case Study" class="w-full h-48 object-cover rounded-lg">
           <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
             Web Development
           </div>
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-4">E-commerce Platform Transformation</h3>
         <p class="text-gray-600 mb-6">
-          How we helped Fashion Forward increase their online sales by 320% through a complete 
+          How we helped Fashion Forward increase their online sales by 320% through a complete
           e-commerce platform redesign and optimization.
         </p>
         <div class="grid grid-cols-3 gap-4 mb-6">
@@ -150,20 +147,19 @@
           Read Full Case Study
         </a>
       </div>
-      
+
       <!-- Case Study 2 -->
       <div class="card p-8 hover-lift fade-in">
         <div class="relative mb-6">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" 
-               alt="SEO Case Study" 
-               class="w-full h-48 object-cover rounded-lg">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop"
+            alt="SEO Case Study" class="w-full h-48 object-cover rounded-lg">
           <div class="absolute top-4 left-4 bg-accent-600 text-white px-3 py-1 rounded-full text-sm font-medium">
             Digital Marketing
           </div>
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-4">SEO Success Story</h3>
         <p class="text-gray-600 mb-6">
-          Our comprehensive SEO strategy helped Tech Solutions Inc. improve their search 
+          Our comprehensive SEO strategy helped Tech Solutions Inc. improve their search
           rankings by 45 positions and increase organic traffic by 400%.
         </p>
         <div class="grid grid-cols-3 gap-4 mb-6">
@@ -197,38 +193,38 @@
         Hear what our clients have to say about working with us.
       </p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="card p-8 text-center hover-lift fade-in">
         <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <i class="fas fa-quote-left text-primary-600 text-2xl"></i>
         </div>
         <p class="text-gray-600 mb-6 italic">
-          "Bytrix transformed our digital presence completely. Their expertise in web development 
+          "Bytrix transformed our digital presence completely. Their expertise in web development
           and digital marketing helped us achieve 300% growth in just 6 months."
         </p>
         <div class="font-bold text-gray-900">Sarah Johnson</div>
         <div class="text-primary-600 text-sm">CEO, TechStart Inc.</div>
       </div>
-      
+
       <div class="card p-8 text-center hover-lift fade-in">
         <div class="w-20 h-20 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <i class="fas fa-quote-left text-accent-600 text-2xl"></i>
         </div>
         <p class="text-gray-600 mb-6 italic">
-          "The team's creativity and technical expertise exceeded our expectations. 
+          "The team's creativity and technical expertise exceeded our expectations.
           Our new website and mobile app have been game-changers for our business."
         </p>
         <div class="font-bold text-gray-900">Michael Chen</div>
         <div class="text-accent-600 text-sm">Founder, DataViz Pro</div>
       </div>
-      
+
       <div class="card p-8 text-center hover-lift fade-in">
         <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <i class="fas fa-quote-left text-primary-600 text-2xl"></i>
         </div>
         <p class="text-gray-600 mb-6 italic">
-          "Working with Bytrix was a fantastic experience. They understood our vision 
+          "Working with Bytrix was a fantastic experience. They understood our vision
           and brought it to life with exceptional results. Highly recommended!"
         </p>
         <div class="font-bold text-gray-900">Emily Rodriguez</div>
@@ -245,7 +241,8 @@
     <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
       Let's discuss your project and create something amazing together.
     </p>
-    <a routerLink="/contact" class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block">
+    <a routerLink="/contact"
+      class="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block">
       Start Your Project
     </a>
   </div>

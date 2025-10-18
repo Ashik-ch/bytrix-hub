@@ -25,9 +25,8 @@ export class TaskManagerComponent implements OnInit {
   loginError = '';
   taskItems: TaskItem[] = [];
   taskForm: FormGroup;
-
+  today = new Date().toISOString().split('T')[0];
   constructor(private fb: FormBuilder,) {
-
     this.taskForm = this.fb.group({
       taskName: ['', Validators.required],
       startDate: ['', Validators.required],
@@ -39,17 +38,17 @@ export class TaskManagerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.initializeDummyData();
+    this.fetchTasks();
   }
 
-  handleLogin(event: any) {
-    this.isLoggedIn = event;
-  }
+  private apiUrl = "https://script.google.com/macros/s/AKfycbxMnCXjiWmrZxT_785Cj1uguMnCdwnsXLdjSKdN6nrI4u9gIfcTTQ0iAlqEHHeUV-anww/exec";
 
-  logout() {
-    this.isLoggedIn = false;
-    // this.loginForm.reset();
-    this.loginError = '';
+  fetchTasks() {
+    fetch(this.apiUrl)
+      .then(res => res.json())
+      .then(data => {
+        this.taskItems = data;
+      });
   }
 
   onSubmit() {
@@ -58,9 +57,19 @@ export class TaskManagerComponent implements OnInit {
         id: this.taskItems.length + 1,
         ...this.taskForm.value
       };
-      this.taskItems.push(newTask);
-      this.taskForm.reset();
+
+      fetch(this.apiUrl, {
+        method: "POST",
+        body: JSON.stringify(newTask),
+        headers: { "Content-Type": "application/json" }
+      })
+        .then(res => res.json())
+        .then(() => {
+          this.taskItems.push(newTask);
+          this.taskForm.reset();
+        });
     }
+    this.taskForm.reset();
   }
 
   deadlineAfterStartValidator(form: FormGroup) {
@@ -76,27 +85,14 @@ export class TaskManagerComponent implements OnInit {
     return null;
   }
 
-  private initializeDummyData() {
-    this.taskItems = [
-      {
-        id: 1,
-        taskName: 'Website Redesign',
-        startDate: '2025-10-01',
-        deadline: '2025-11-15',
-        assignee: 'John Doe',
-        clientName: 'XYZ Ltd',
-        notes: 'Complete redesign of the company website with modern UI/UX'
-      },
-      {
-        id: 2,
-        taskName: 'SEO Optimization',
-        startDate: '2025-09-20',
-        deadline: '2025-10-30',
-        assignee: 'Jane Smith',
-        clientName: 'ABC Corp',
-        notes: 'Implement SEO best practices and improve search rankings'
-      }
-    ];
+  handleLogin(event: any) {
+    this.isLoggedIn = event;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+    // this.loginForm.reset();
+    this.loginError = '';
   }
 }
 

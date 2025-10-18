@@ -23,7 +23,11 @@
     <div class="bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl rounded-2xl p-8">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-white">📋 Tasks / Projects</h2>
-        <span class="text-sm text-gray-300">{{ taskItems.length }} total</span>
+        <span class="text-sm text-gray-300">
+          <span class="pi pi-file-excel">
+            <a href="https://docs.google.com/spreadsheets/d/1Kyhu8jYOwnpFXciPpF98rJU_yhfzn_ltKTtzovF8FN0/edit?usp=sharing"
+              class="curspr-pointer">📩</a></span>
+          {{ taskItems.length }} total</span>
       </div>
       <div class="overflow-x-auto rounded-lg border border-white/20">
         <table class="w-full text-left border-collapse">
@@ -41,8 +45,9 @@
             <tr *ngFor="let task of taskItems; let i = index"
               class="transition-all duration-300 hover:bg-white/20 hover:backdrop-blur-md">
               <td class="px-6 py-4 font-semibold">{{ task.taskName }}</td>
-              <td class="px-6 py-4 text-gray-200">{{ task.startDate }}</td>
-              <td class="px-6 py-4 text-gray-200">{{ task.deadline }}</td>
+              <td class="px-6 py-4 text-gray-200">{{ task.startDate |date }}</td>
+              <td class="px-6 py-4 text-gray-200" [ngClass]="task.deadline< today ? 'bg-red-500': 'bg-none'">{{
+                task.deadline | date}} </td>
               <td class="px-6 py-4 text-gray-200">{{ task.assignee }}</td>
               <td class="px-6 py-4 text-gray-200">{{ task.clientName }}</td>
               <td class="px-6 py-4 max-w-xs truncate text-gray-300">{{ task.notes }}</td>
@@ -62,7 +67,7 @@
 
       <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="relative">
-          <input type="text" id="taskName" formControlName="taskName"
+          <input type="text" id="taskName" formControlName="taskName" name="taskName"
             class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white placeholder-transparent rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all"
             placeholder="Task Name" />
           <label for="taskName"
@@ -76,7 +81,7 @@
 
         <!-- Client Name -->
         <div class="relative">
-          <input type="text" id="clientName" formControlName="clientName"
+          <input type="text" id="clientName" formControlName="clientName" name="clientName"
             class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white placeholder-transparent rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all"
             placeholder="Client Name" />
           <label for="clientName"
@@ -90,7 +95,7 @@
 
         <!-- Dates -->
         <div class="relative">
-          <input type="date" id="startDate" formControlName="startDate"
+          <input type="date" id="startDate" formControlName="startDate" name="startDate"
             class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all" />
           <label for="startDate"
             class="absolute left-4 top-2 text-gray-300 text-sm transition-all peer-focus:text-primary-300">
@@ -102,8 +107,8 @@
         </div>
 
         <div class="relative">
-          <input type="date" id="deadline" formControlName="deadline"
-            class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all" />
+          <input type="date" id="deadline" formControlName="deadline" name="deadline" class=" peer w-full px-4 pt-5 pb-2 bg-white/10 text-white rounded-xl border border-white/30
+            focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all" />
           <label for="deadline"
             class="absolute left-4 top-2 text-gray-300 text-sm transition-all peer-focus:text-primary-300">
             Deadline *
@@ -117,8 +122,8 @@
         </div>
 
         <div class="relative">
-          <input type="text" id="assignee" formControlName="assignee"
-            class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white placeholder-transparent rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all"
+          <input type="text" id="assignee" formControlName="assignee" name="assignee" class=" peer w-full px-4 pt-5 pb-2 bg-white/10 text-white placeholder-transparent rounded-xl border
+            border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all"
             placeholder="Assignee" />
           <label for="assignee"
             class="absolute left-4 top-2 text-gray-300 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary-300">
@@ -131,7 +136,7 @@
 
         <!-- Notes -->
         <div class="relative md:col-span-2">
-          <textarea id="notes" formControlName="notes" rows="4"
+          <textarea id="notes" formControlName="notes" rows="4" name="notes"
             class="peer w-full px-4 pt-5 pb-2 bg-white/10 text-white placeholder-transparent rounded-xl border border-white/30 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/50 transition-all resize-none"
             placeholder="Notes"></textarea>
           <label for="notes"

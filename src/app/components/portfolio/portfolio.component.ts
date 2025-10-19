@@ -39,17 +39,17 @@ export class PortfolioComponent {
     },
     {
       id: 2,
-      title: 'Fitness Mobile App',
-      category: 'mobile-apps',
-      client: 'FitLife',
-      description: 'A comprehensive fitness tracking app with workout plans, nutrition tracking, and social features.',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
+      title: 'Deep Cleaning website',
+      category: 'Service Website',
+      client: 'ClearGo',
+      description: 'A professional service website for ClearGo, offering deep cleaning solutions with details on services, booking options, and customer support.',
+      image: 'assets/images/web.png',
       results: {
-        downloads: '50K+',
+        visit: '50K+',
         rating: '4.8/5',
         retention: '85%'
       },
-      technologies: ['React Native', 'Firebase', 'Redux'],
+      technologies: ['React Native', 'Firebase',],
       link: '#'
     },
     {

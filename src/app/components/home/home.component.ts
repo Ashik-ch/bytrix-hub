@@ -46,28 +46,28 @@ export class HomeComponent {
 
   testimonials = [
     {
-      name: 'Sarah',
+      name: 'Rasha',
       company: 'TechStart Inc.',
       role: 'CEO',
-      content: 'Bytrix transformed our digital presence completely. Our website traffic increased by 300% in just 6 months!',
+      content: `Honestly, Bytrix completely changed our online game. In just six months, our website traffic shot up by 300%. I'm seriously impressed with how much they improved our whole digital presence.`,
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQHdGUIybC3GTA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709126586790?e=2147483647&v=beta&t=70eN7o64dgDRvCNFS0E3px7PNUPB8xaZcAumihepGy8'
     },
     {
-      name: 'Michael Chen',
+      name: 'Junaid P',
       company: 'Local Restaurant',
       role: 'Owner',
-      content: 'Their local SEO strategies brought us 50% more customers. Highly recommended for any local business!',
+      content: `We started working with Bytrix on local SEO, and it made a huge difference. We're getting 50% more customers now.If you're a local business, you need to use them—highly recommend!`,
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdz5kFucdw2l7srdlElM15_DZlbH6DaE2G9Q&s'
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Soumya',
       company: 'Fashion Boutique',
       role: 'Marketing Director',
-      content: 'The social media campaigns they created for us were absolutely amazing. Our engagement rates skyrocketed!',
+      content: `The social media campaigns Bytrix created were fantastic! They really understood our brand. Our engagement rates are through the top now—it was an amazing return on investment.`,
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+      image: 'https://media.licdn.com/dms/image/v2/C4D03AQFSNOAzmQpesA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1620468840744?e=2147483647&v=beta&t=2JeSlyoWhsUSXngmoYOjsjKAuSrGYDBUu7pIrUftfHA'
     }
   ];
 

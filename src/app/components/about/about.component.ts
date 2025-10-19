@@ -41,7 +41,7 @@ export class AboutComponent {
       bio: 'Digital marketing expert with 10+ years of experience helping businesses grow online.',
       social: {
         linkedin: 'https://linkedin.com/in/anshidka',
-        twitter: 'https://twitter.com/anshidka'
+        instagram: 'https://instagram.com/anshidka'
       }
     },
     {
@@ -51,7 +51,8 @@ export class AboutComponent {
       bio: 'Designer passionate about creating memorable brand experiences through web and app development.',
       social: {
         linkedin: 'https://linkedin.com/in/ashikch',
-        instagram: 'https://instagram.com/_ashik_ch'
+        instagram: 'https://instagram.com/_ashik_ch',
+        github: 'https://github.com/ashik-ch',
       }
     },
     {
@@ -61,7 +62,7 @@ export class AboutComponent {
       bio: 'Content strategist and storyteller crafting compelling narratives for brands.',
       social: {
         linkedin: 'https://linkedin.com/in/navasjan',
-        github: 'https://github.com/navas_jan'
+        instagram: 'https://instagram.com/navasjanparakkal'
       }
     }
   ];

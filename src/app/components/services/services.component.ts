@@ -41,7 +41,7 @@ export class ServicesComponent {
         }
       ],
       pricing: {
-        starting: '$500',
+        starting: '',
         period: 'month'
       }
     },
@@ -51,7 +51,7 @@ export class ServicesComponent {
       title: 'Social Media Marketing',
       subtitle: 'Build Your Brand Presence',
       description: 'Create engaging social media strategies that build brand awareness, drive engagement, and convert followers into customers.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'assets/images/marketing.jpg',
       features: [
         {
           title: 'Facebook Ads',
@@ -75,7 +75,7 @@ export class ServicesComponent {
         }
       ],
       pricing: {
-        starting: '$800',
+        starting: '',
         period: 'month'
       }
     },
@@ -85,7 +85,7 @@ export class ServicesComponent {
       title: 'Creative Services',
       subtitle: 'Bring Your Ideas to Life',
       description: 'Professional design and content creation services that make your brand stand out and connect with your audience.',
-      image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop',
+      image: 'assets/images/creative.jpg',
       features: [
         {
           title: 'Graphic Design',
@@ -109,7 +109,7 @@ export class ServicesComponent {
         }
       ],
       pricing: {
-        starting: '$300',
+        starting: '',
         period: 'project'
       }
     },
@@ -119,7 +119,7 @@ export class ServicesComponent {
       title: 'Web & App Development',
       subtitle: 'Digital Solutions That Work',
       description: 'Custom websites and mobile applications built with modern technologies and best practices for optimal performance.',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+      image: 'assets/images/creative-web.jpg',
       features: [
         {
           title: 'Responsive Websites',
@@ -143,7 +143,7 @@ export class ServicesComponent {
         }
       ],
       pricing: {
-        starting: '$2000',
+        starting: '',
         period: 'project'
       }
     },
@@ -177,7 +177,7 @@ export class ServicesComponent {
         }
       ],
       pricing: {
-        starting: '$400',
+        starting: '',
         period: 'month'
       }
     }
@@ -188,4 +188,28 @@ export class ServicesComponent {
   selectService(service: any) {
     this.selectedService = service;
   }
+
+  steps = [
+    {
+      number: 1,
+      title: 'Discovery',
+      description: 'We learn about your business, goals, and challenges to create the perfect strategy.'
+    },
+    {
+      number: 2,
+      title: 'Strategy',
+      description: 'We develop a comprehensive plan tailored to your specific needs and objectives.'
+    },
+    {
+      number: 3,
+      title: 'Implementation',
+      description: 'Our team executes the strategy with precision and attention to detail.'
+    },
+    {
+      number: 4,
+      title: 'Optimization',
+      description: 'We continuously monitor and optimize for better results and ROI.'
+    }
+  ];
+
 }

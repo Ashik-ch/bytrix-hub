@@ -21,5 +21,5 @@ import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-b
   styles: []
 })
 export class AppComponent {
-  title = 'Bytrix - Where Creativity Meets Technology';
+  title = 'Bytrix Hub- Where Creativity Meets Technology';
 }

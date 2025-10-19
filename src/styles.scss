@@ -2,8 +2,6 @@
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +16,6 @@ body {
   line-height: 1.6;
   color: #333;
 }
-
 
 // Custom scrollbar
 ::-webkit-scrollbar {
@@ -94,6 +91,16 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.gradient-button {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+}
+
+fra
 
 // Button styles
 .btn-primary {

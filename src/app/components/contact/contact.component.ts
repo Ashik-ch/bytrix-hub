@@ -32,19 +32,21 @@ export class ContactComponent {
     {
       icon: 'fas fa-map-marker-alt',
       title: 'Address',
-      details: '123 Business Street<br>City, State 12345',
+      details: `Deira - Qatar,
+    Bur Dubai - Dubai,
+  Kozhikode - Kerala`,
       color: 'text-primary-600'
     },
     {
       icon: 'fas fa-phone',
       title: 'Phone',
-      details: '+1 (234) 567-890',
+      details: '+91 75610 84625',
       color: 'text-accent-600'
     },
     {
       icon: 'fas fa-envelope',
       title: 'Email',
-      details: 'hello@bytrix.com',
+      details: 'info@bytrixhub.com',
       color: 'text-primary-600'
     },
     {
@@ -56,11 +58,11 @@ export class ContactComponent {
   ];
 
   socialLinks = [
-    { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'https://facebook.com/bytrix', color: 'bg-blue-600' },
-    { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://instagram.com/bytrix', color: 'bg-pink-600' },
-    { name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: 'https://linkedin.com/company/bytrix', color: 'bg-blue-700' },
-    { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/bytrix', color: 'bg-blue-400' },
-    { name: 'YouTube', icon: 'fab fa-youtube', url: 'https://youtube.com/bytrix', color: 'bg-red-600' }
+    { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'https://facebook.com/bytrixhub', color: 'bg-blue-600' },
+    { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://instagram.com/bytrixhub', color: 'bg-pink-600' },
+    { name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: 'https://linkedin.com/company/bytrixhub', color: 'bg-blue-700' },
+    { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/bytrixhub', color: 'bg-blue-400' },
+    { name: 'YouTube', icon: 'fab fa-youtube', url: 'https://youtube.com/bytrixhub', color: 'bg-red-600' }
   ];
 
   isSubmitting = false;
@@ -68,12 +70,12 @@ export class ContactComponent {
 
   onSubmit() {
     this.isSubmitting = true;
-    
+
     // Simulate form submission
     setTimeout(() => {
       this.isSubmitting = false;
       this.submitSuccess = true;
-      
+
       // Reset form
       this.contactForm = {
         name: '',
@@ -83,7 +85,7 @@ export class ContactComponent {
         service: '',
         message: ''
       };
-      
+
       // Hide success message after 5 seconds
       setTimeout(() => {
         this.submitSuccess = false;
@@ -101,7 +103,7 @@ Company: ${this.contactForm.company || 'Not provided'}
 Service: ${this.contactForm.service || 'Not specified'}
 
 Message: ${this.contactForm.message || 'Please contact me for more information.'}`;
-    
+
     const phoneNumber = '+1234567890'; // Replace with actual phone number
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

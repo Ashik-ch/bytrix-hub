@@ -27,7 +27,8 @@ export class FooterComponent {
     { name: 'Services', route: '/services' },
     { name: 'Portfolio', route: '/portfolio' },
     { name: 'Blog', route: '/blog' },
-    { name: 'Contact', route: '/contact' }
+    { name: 'Contact', route: '/contact' },
+    { name: 'Admin Hub', route: '/tasks' }
   ];
 
   services = [

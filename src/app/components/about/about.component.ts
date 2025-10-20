@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -90,4 +90,49 @@ export class AboutComponent {
       description: 'Successfully completed over 50 projects across various industries.'
     }
   ];
+
+  // milestone scroll logic 
+  activeNodePosition: number = 0;
+  targetNodePosition: number = 0;
+  @ViewChildren('milestoneElement') milestoneElements!: QueryList<ElementRef>;
+  @HostListener('window:scroll', [])
+  onScroll() {
+    let scrollY = window.scrollY + window.innerHeight / 2;
+
+    let closestIndex = 0;
+    let closestDistance = Number.MAX_VALUE;
+
+    this.milestoneElements.forEach((el: any, index: any) => {
+      const rect = el.nativeElement.getBoundingClientRect();
+      const elementMid = rect.top + window.scrollY + rect.height / 2;
+
+      const distance = Math.abs(scrollY - elementMid);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    // Set new target position instead of snapping
+    const target = this.milestoneElements.toArray()[closestIndex].nativeElement;
+    this.targetNodePosition = target.offsetTop + target.offsetHeight / 2;
+
+    this.animateNode();
+  }
+
+  animateNode() {
+    const step = () => {
+      // Smooth interpolation
+      this.activeNodePosition += (this.targetNodePosition - this.activeNodePosition) * 0.1;
+
+      // Keep updating until close enough
+      if (Math.abs(this.targetNodePosition - this.activeNodePosition) > 0.5) {
+        requestAnimationFrame(step);
+      } else {
+        this.activeNodePosition = this.targetNodePosition; // snap final
+      }
+    };
+    requestAnimationFrame(step);
+  }
+
 }

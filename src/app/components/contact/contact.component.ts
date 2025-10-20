@@ -31,31 +31,52 @@ export class ContactComponent {
   contactInfo = [
     {
       icon: 'fas fa-map-marker-alt',
-      title: 'Address',
-      details: `Deira - Qatar,
-    Bur Dubai - Dubai,
-  Kozhikode - Kerala`,
+      title: 'Our Offices',
+      details: `
+      <div class="space-y-2">
+        <p><strong>🇶🇦 Qatar:</strong> Al Rayyan, Doha</p>
+        <p><strong>🇦🇪 UAE:</strong> Bur Dubai, Dubai</p>
+        <p><strong>🇮🇳 India:</strong> Kozhikode, Kerala</p>
+      </div>
+    `,
       color: 'text-primary-600'
     },
     {
       icon: 'fas fa-phone',
-      title: 'Phone',
-      details: '+91 75610 84625',
+      title: 'Phone Numbers',
+      details: `
+      <div class="space-y-2">
+        <p><strong>Qatar:</strong> <a href="tel:+97439956724" class="hover:text-primary-600">+974 3995 6724</a></p>
+        <p><strong>Dubai:</strong> <a href="tel:+971557935653" class="hover:text-primary-600">+971 55 793 5653</a></p>
+        <p><strong>Kerala:</strong> <a href="tel:+917356062242" class="hover:text-primary-600">+91 73560 62242</a></p>
+      </div>
+    `,
       color: 'text-accent-600'
     },
     {
       icon: 'fas fa-envelope',
       title: 'Email',
-      details: 'info@bytrixhub.com',
+      details: `
+      <a href="mailto:info@bytrixhub.com" class="text-gray-700 hover:text-primary-600 transition">
+        info@bytrixhub.com
+      </a>
+    `,
       color: 'text-primary-600'
     },
     {
       icon: 'fas fa-clock',
       title: 'Business Hours',
-      details: 'Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM',
+      details: `
+      <div class="space-y-1">
+        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+        <p>Sat: 10:00 AM - 4:00 PM</p>
+        <p class="text-gray-500 text-sm">Closed on Sundays</p>
+      </div>
+    `,
       color: 'text-accent-600'
     }
   ];
+
 
   socialLinks = [
     { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'https://facebook.com/bytrixhub', color: 'bg-blue-600' },
@@ -86,7 +107,6 @@ export class ContactComponent {
         message: ''
       };
 
-      // Hide success message after 5 seconds
       setTimeout(() => {
         this.submitSuccess = false;
       }, 5000);
@@ -104,7 +124,7 @@ Service: ${this.contactForm.service || 'Not specified'}
 
 Message: ${this.contactForm.message || 'Please contact me for more information.'}`;
 
-    const phoneNumber = '+1234567890'; // Replace with actual phone number
+    const phoneNumber = '+97439956727';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }

@@ -25,7 +25,13 @@ export class HomeComponent {
       icon: 'fas fa-share-alt',
       title: 'Social Media Marketing',
       description: 'Build your brand presence across all major social media platforms with engaging content.',
-      features: ['Facebook Ads', 'Instagram Marketing', 'Personal Branding', 'Content Strategy']
+      features: ['Facebook Ads', 'Instagram Marketing', 'Content Strategy']
+    },
+    {
+      icon: 'fas fa-share-alt',
+      title: 'Personal Brand Growth',
+      description: 'Stand out online and position yourself as an industry authority.Build trust, visibility, and influence that open new opportunities.',
+      features: ['Google Knowledge Panel Optimization', 'Personal SEO Strategy', 'Reputation & Review Management', ' Social Media Branding', 'Content & PR Growth']
     },
     {
       icon: 'fas fa-palette',
@@ -52,6 +58,6 @@ export class HomeComponent {
     { number: '70+', label: 'Projects Completed' },
     { number: '30+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
-    { number: '100%', label: 'Client Satisfaction' }
+    { number: '93%', label: 'Client Satisfaction' }
   ];
 }

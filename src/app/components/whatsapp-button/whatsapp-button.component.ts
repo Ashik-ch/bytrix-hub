@@ -26,7 +26,7 @@ export class WhatsappButtonComponent {
 
   openWhatsApp() {
     const message = "Hi! I'm interested in your digital marketing services. Can you help me?";
-    const phoneNumber = "+1234567890"; // Replace with actual WhatsApp number
+    const phoneNumber = "+97439956727";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   }

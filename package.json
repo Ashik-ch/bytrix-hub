@@ -1,7 +1,7 @@
 {
   "name": "bytrix-hub",
   "version": "1.0.0",
-  "description": "Bytrix - Where Creativity Meets Technology",
+  "description": "Bytrix Hub - Where Creativity Meets Technology",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

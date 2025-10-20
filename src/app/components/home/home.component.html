@@ -57,23 +57,8 @@
   </div>
 </section>
 
+<app-stats></app-stats>
 
-<!-- Stats Section -->
-<section class="py-8 bg-[url(assets/images/bg1.png)] bg-cover  text-white">
-  <div class="container-custom relative z-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-      <div *ngFor="let stat of stats" class="group transform transition-all duration-300 hover:scale-105">
-        <div
-          class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent drop-shadow-sm mb-3 animate-fadeInUp">
-          {{ stat.number }}
-        </div>
-        <div class="text-gray-700 font-medium tracking-wide group-hover:text-primary-700 transition-colors">
-          {{ stat.label }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- Services Overview Section -->
 <section class="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
   <!-- background glow elements -->

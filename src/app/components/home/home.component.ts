@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CountUpModule } from 'ngx-countup';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
+import { StatsComponent } from "../pages/stats/stats.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterModule, CountUpModule,
-    TestimonialComponent
-  ],
+    TestimonialComponent, StatsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -28,7 +28,7 @@ export class HomeComponent {
       features: ['Facebook Ads', 'Instagram Marketing', 'Content Strategy']
     },
     {
-      icon: 'fas fa-share-alt',
+      icon: 'fas fa-user-tie',
       title: 'Personal Brand Growth',
       description: 'Stand out online and position yourself as an industry authority.Build trust, visibility, and influence that open new opportunities.',
       features: ['Google Knowledge Panel Optimization', 'Personal SEO Strategy', 'Reputation & Review Management', ' Social Media Branding', 'Content & PR Growth']
@@ -54,10 +54,4 @@ export class HomeComponent {
   ];
 
 
-  stats = [
-    { number: '70+', label: 'Projects Completed' },
-    { number: '30+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '93%', label: 'Client Satisfaction' }
-  ];
 }

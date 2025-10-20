@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CountUpModule } from 'ngx-countup';
 import { TestimonialComponent } from "../testimonial/testimonial.component";
+import { StatsComponent } from "../pages/stats/stats.component";
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, RouterModule, CountUpModule, TestimonialComponent],
+  imports: [CommonModule, RouterModule, CountUpModule, TestimonialComponent, StatsComponent],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })

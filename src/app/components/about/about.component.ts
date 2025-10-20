@@ -86,7 +86,7 @@ export class AboutComponent {
     },
     {
       year: '2024',
-      title: '50+ Projects',
+      title: '70+ Projects',
       description: 'Successfully completed over 50 projects across various industries.'
     }
   ];

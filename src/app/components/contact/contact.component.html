@@ -142,45 +142,24 @@
 <!-- FAQ Section -->
 <section class="section-padding bg-[url('assets/images/ctabg1.jpg')] bg-cover bg-fixed">
   <div class="container-custom">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-gray-50 mb-4">Frequently Asked Questions</h2>
-      <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-50 mb-3">Frequently Asked Questions</h2>
+      <p class="text-lg text-gray-100 max-w-3xl mx-auto">
         Find answers to common questions about our services and process.
       </p>
     </div>
 
-    <div class="max-w-4xl mx-auto">
-      <div class="space-y-6">
-        <div class="card p-6 hover-lift fade-in">
-          <h3 class="text-lg font-bold text-gray-900 mb-2">How long does a typical project take?</h3>
-          <p class="text-gray-600">Project timelines vary depending on scope and complexity. A simple website might take
-            2-4 weeks, while a comprehensive digital marketing campaign could take 3-6 months. We'll provide a detailed
-            timeline during our initial consultation.</p>
-        </div>
-
-        <div class="card p-6 hover-lift fade-in">
-          <h3 class="text-lg font-bold text-gray-900 mb-2">What's included in your free consultation?</h3>
-          <p class="text-gray-600">Our free consultation includes a thorough analysis of your current digital presence,
-            discussion of your goals, and recommendations for improvement. We'll also provide a custom quote for any
-            services you're interested in.</p>
-        </div>
-
-        <div class="card p-6 hover-lift fade-in">
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Do you work with small businesses?</h3>
-          <p class="text-gray-600">Absolutely! We work with businesses of all sizes, from startups to large enterprises.
-            We have packages and services specifically designed for small businesses and local companies.</p>
-        </div>
-
-        <div class="card p-6 hover-lift fade-in">
-          <h3 class="text-lg font-bold text-gray-900 mb-2">What makes you different from other agencies?</h3>
-          <p class="text-gray-600">We combine creativity with data-driven strategies, provide transparent reporting, and
-            maintain close communication throughout the project. Our team stays updated with the latest trends and
-            technologies to deliver cutting-edge solutions.</p>
-        </div>
+    <!-- Grid layout for FAQs -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div *ngFor="let faq of faqs"
+        class="card p-6 bg-white/90 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 fade-in">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ faq.question }}</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">{{ faq.answer }}</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- CTA Section -->
 <section class="section-padding bg-[url('assets/images/bg9.jpg')] bg-cover bg-center">

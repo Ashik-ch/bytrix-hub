@@ -36,17 +36,17 @@ export class AboutComponent {
   team = [
     {
       name: 'Anshid KA',
-      role: 'Business Strategist & Co-Founder', // Handles business strategy, client relations, marketing, SEO
+      role: 'Business Strategist & Founder',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqvFPqZjPsXJacDm1xViKkRmaF7iXe22HVdQ&s',
-      bio: 'Digital marketing expert with 10+ years of experience helping businesses grow online.',
+      bio: 'Digital marketing expert with 7+ years of experience helping businesses grow online.',
       social: {
-        linkedin: 'https://linkedin.com/in/anshidka',
-        instagram: 'https://instagram.com/anshidka'
+        linkedin: 'https://linkedin.com/in/anshidanshy',
+        instagram: 'https://instagram.com/anshidanshy'
       }
     },
     {
       name: 'Ashik CH',
-      role: 'Tech Lead & Co-Founder', // Handles technical development, web & app design
+      role: 'Tech Lead & Co-Founder',
       image: 'https://media.licdn.com/dms/image/v2/D5603AQGrQ5zodG5v-g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1699258218399?e=2147483647&v=beta&t=ZJAWLsGQXvW6MEvkHLPuNoFGyG0d2dMc0NMSaJQ8MLE',
       bio: 'Designer passionate about creating memorable brand experiences through web and app development.',
       social: {
@@ -57,11 +57,11 @@ export class AboutComponent {
     },
     {
       name: 'Navas Jan',
-      role: 'Content Head & Co-Founder', // Chief of content creation, social media, copywriting
+      role: 'Chief Strategic Officer ',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifSvnfGb-wqjD8o2-gSnnbxkOfo0VcfX49A&s',
       bio: 'Content strategist and storyteller crafting compelling narratives for brands.',
       social: {
-        linkedin: 'https://linkedin.com/in/navasjan',
+        linkedin: 'https://linkedin.com/in/navas-jan-p-3b6245244',
         instagram: 'https://instagram.com/navasjanparakkal'
       }
     }
@@ -70,14 +70,19 @@ export class AboutComponent {
 
   milestones = [
     {
-      year: '2021',
+      year: '2020',
       title: 'Company Founded',
       description: 'Started with a vision to help businesses succeed in the digital world.'
     },
     {
-      year: '2022',
+      year: '2021',
       title: 'First 10 Clients',
       description: 'Reached our first milestone of serving 10 satisfied clients.'
+    },
+    {
+      year: '2022',
+      title: 'Expanded Clients to 25',
+      description: 'Reached our  delightful of serving 25 satisfied clients.'
     },
     {
       year: '2023',
@@ -87,7 +92,7 @@ export class AboutComponent {
     {
       year: '2024',
       title: '70+ Projects',
-      description: 'Successfully completed over 50 projects across various industries.'
+      description: 'Successfully completed over 70 projects across various industries.'
     }
   ];
 

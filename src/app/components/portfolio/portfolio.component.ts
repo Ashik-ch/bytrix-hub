@@ -37,7 +37,7 @@ export class PortfolioComponent {
       solution:
         'Developed compliant yet engaging visuals and ad creatives that built patient trust.',
       image:
-        'https://images.unsplash.com/photo-1588776814546-5486c0d1a632?w=600&h=400&fit=crop',
+        'https://www.mythilimanthra.com/img/about/1.png?w=600&h=400&fit=crop',
       results: {
         engagement: '+120%',
         leads: '+80%',
@@ -86,7 +86,7 @@ export class PortfolioComponent {
       link: '#',
     },
     {
-      id: 16,
+      id: 4,
       title: 'Vythiri Greens & DJ Medavos Resorts',
       category: 'marketing',
       client: 'Mr. Lijin – Vythiri, Wayanad',
@@ -96,8 +96,7 @@ export class PortfolioComponent {
       chalanges: 'Maintaining unique identities for each resort under one brand.',
       solution:
         'Created distinct designs and localized SEO strategies for each property.',
-      image:
-        'https://images.unsplash.com/photo-1501117716987-c8e1ecb210d3?w=600&h=400&fit=crop',
+      image: 'https://www.vythirivillage.com/wp-content/uploads/2020/11/rooms-banner.jpg',
       results: {
         bookings: '+220%',
         brandAwareness: '+160%',
@@ -116,8 +115,7 @@ export class PortfolioComponent {
       chalanges: 'Handling multilingual content and ad compliance across regions.',
       solution:
         'Localized marketing campaigns and optimized targeting to reach ideal audiences.',
-      image:
-        'https://images.unsplash.com/photo-1596496057060-7aa74a96d8d8?w=600&h=400&fit=crop',
+      image: 'https://brighteduway.com/wp-content/uploads/2024/11/IMG_0899-scaled.jpg',
       results: {
         leads: '+170%',
         visibility: '+190%',
@@ -136,8 +134,7 @@ export class PortfolioComponent {
       chalanges: 'Capturing the adventure experience authentically on camera.',
       solution:
         'Used drone videography and dynamic storytelling to convey excitement and trust.',
-      image:
-        'https://images.unsplash.com/photo-1583512603805-3cc6b9e8c9e1?w=600&h=400&fit=crop',
+      image: 'https://tripinic.com/wp-content/uploads/2024/01/Attamala-Digital-Glass-Bridge.jpg',
       results: {
         engagement: '+250%',
         tourists: '+180%',
@@ -157,7 +154,7 @@ export class PortfolioComponent {
       solution:
         'Created teaser ads, branding assets, and identity-driven ad campaigns.',
       image:
-        'https://images.unsplash.com/photo-1555992336-cbfad6e7a3b2?w=600&h=400&fit=crop',
+        'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/b0/79/a1/comedor-principal-vista.jpg?w=900&h=-1&s=1',
       results: {
         brandReach: '+210%',
         sales: '+120%',
@@ -176,7 +173,7 @@ export class PortfolioComponent {
       solution:
         'Used professional underwater gear and dynamic editing to capture the experience.',
       image:
-        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop',
+        'https://www.tripplannersindia.com/assets/images/page/Lakshadweep_Scuba_Diving_Tour_Package.webp',
       results: {
         videoViews: '+300%',
         inquiries: '+200%',
@@ -196,7 +193,7 @@ export class PortfolioComponent {
       solution:
         'Used minimal design principles and elegant colors for timeless appeal.',
       image:
-        'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=600&h=400&fit=crop',
+        'https://card.oraina.in/wl/oraina/og.png',
       results: {
         impressions: '+150%',
         brandRecognition: '+100%',
@@ -216,8 +213,7 @@ export class PortfolioComponent {
         'Maintaining individual brand identities while ensuring group cohesion.',
       solution:
         'Implemented a unified design system and synchronized marketing strategies across all brands.',
-      image:
-        'https://images.unsplash.com/photo-1581093588401-22d3d5a3efb8?w=600&h=400&fit=crop',
+      image: 'https://gavaerixmar.com/Assets/images/logo/gavaart.png',
       results: {
         networkGrowth: '+180%',
         efficiency: '+130%',
@@ -236,8 +232,7 @@ export class PortfolioComponent {
       chalanges: 'Ensuring cohesive branding across multiple digital assets.',
       solution:
         'Designed unified brand visuals and optimized GMB listings for improved reach.',
-      image:
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+      image: 'https://uploads3.fw360.it/uploads/env/4/front/img/blog/posts/honey-website-sales.png',
       results: {
         engagement: '+150%',
         visitors: '+200%',
@@ -253,7 +248,7 @@ export class PortfolioComponent {
       description:
         'Designed and developed a professional service website for ClearGo, a Calicut-based deep cleaning company. The website highlights their services, booking options, and client trust with a modern, SEO-optimized design.',
       project: 'Website, SEO, GMB Optimization, Content & Design',
-      chalanges:
+      challenges:
         'Building trust and visibility for a new local cleaning service in a competitive market.',
       solution:
         'Created a clean, responsive website focused on service clarity and strong visuals. Optimized Google Business Profile and SEO content to drive local inquiries and conversions.',

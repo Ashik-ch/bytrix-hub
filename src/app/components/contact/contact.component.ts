@@ -79,10 +79,10 @@ export class ContactComponent {
 
 
   socialLinks = [
-    { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'https://facebook.com/bytrixhub', color: 'bg-blue-600' },
-    { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://instagram.com/bytrixhub', color: 'bg-pink-600' },
+    { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'http://facebook.com/people/Bytrixhub/61582213150314/', color: 'bg-blue-600' },
+    { name: 'Instagram', icon: 'fab fa-instagram', url: 'https://instagram.com/bytrix.hub', color: 'bg-pink-600' },
     { name: 'LinkedIn', icon: 'fab fa-linkedin-in', url: 'https://linkedin.com/company/bytrixhub', color: 'bg-blue-700' },
-    { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/bytrixhub', color: 'bg-blue-400' },
+    { name: 'WhatsApp', icon: 'fab fa-whatsapp', url: 'https://wa.me/97439956727', color: 'bg-blue-400' },
     { name: 'YouTube', icon: 'fab fa-youtube', url: 'https://youtube.com/bytrixhub', color: 'bg-red-600' }
   ];
 

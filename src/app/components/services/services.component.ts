@@ -180,7 +180,48 @@ export class ServicesComponent {
         starting: '',
         period: 'month'
       }
+    },
+    {
+      id: 'personal-branding',
+      icon: 'fas fa-user-astronaut',
+      title: 'Personal Branding',
+      subtitle: 'Build a Magnetic Digital Identity',
+      description:
+        'Empower your online presence and position yourself as an industry authority. We craft tailored strategies that boost your credibility, visibility, and influence across search engines and social media.',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
+      features: [
+        {
+          title: 'Google Knowledge Panel Setup',
+          description: 'Get verified presence on Google search with a custom Knowledge Panel for your name or brand.',
+          icon: 'fab fa-google'
+        },
+        {
+          title: 'Personal SEO Strategy',
+          description: 'Rank your personal name or brand higher in Google search results using optimized content and backlinks.',
+          icon: 'fas fa-search-dollar'
+        },
+        {
+          title: 'Reputation & Review Management',
+          description: 'Monitor and enhance your online reputation across Google, news, and social platforms.',
+          icon: 'fas fa-star-half-alt'
+        },
+        {
+          title: 'Social Media Branding',
+          description: 'Build a strong personal identity across LinkedIn, Instagram, and other major platforms.',
+          icon: 'fab fa-linkedin'
+        },
+        {
+          title: 'Content & PR Growth',
+          description: 'Boost visibility through feature articles, interviews, and strategic content collaborations.',
+          icon: 'fas fa-bullhorn'
+        }
+      ],
+      pricing: {
+        starting: '',
+        period: 'month'
+      }
     }
+
   ];
 
   selectedService = this.services[0];

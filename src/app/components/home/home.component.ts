@@ -9,7 +9,7 @@ import { StatsComponent } from "../pages/stats/stats.component";
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterModule, CountUpModule,
-    TestimonialComponent, StatsComponent],
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -52,6 +52,21 @@ export class HomeComponent {
       features: ['Google My Business', 'Local SEO', 'Review Management', 'Local Advertising']
     }
   ];
+
+  offer = [
+    'Medical / Health Services',
+    'Education / Coaching & Schools',
+    'Legal Services / Law Firm',
+    'Hospitality / Resorts',
+    'Tourism / Adventure',
+    'Food / Spices / Restaurant',
+    'Insurance / Financial Services',
+    'Luxury / Lifestyle / Brand',
+    'Nutrition / Health Products',
+    'Logistics & Trading / Conglomerate',
+    'Technology / Digital Branding & Service'
+  ];
+
 
 
 }

@@ -61,15 +61,15 @@
           <p class="text-gray-600 mb-4">{{ project.description }}</p>
 
           <!-- Results -->
-          <div class="grid grid-cols-3 gap-4 mb-4">
+          <!-- <div class="grid grid-cols-3 gap-4 mb-4">
             <div *ngFor="let result of project.results | keyvalue" class="text-center">
               <div class="text-lg font-bold text-primary-600">{{ result.value }}</div>
               <div class="text-xs text-gray-500">{{ result.key }}</div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Technologies -->
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2" *ngIf="project.category=='web-development'">
             <span *ngFor="let tech of project.technologies"
               class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
               {{ tech }}

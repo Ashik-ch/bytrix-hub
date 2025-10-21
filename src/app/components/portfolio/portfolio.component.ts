@@ -27,18 +27,22 @@ export class PortfolioComponent {
     {
       id: 1,
       title: 'Mythili Manthra Skin & Hair Clinic',
-      category: 'digital-marketing',
+      category: 'marketing',
       client: 'Dr. Saigeetha CM – Bangalore',
       description:
-        'We handled their complete digital marketing setup — from Meta and Google Ads to brand identity and GMB optimization, boosting visibility and patient reach.',
+        'Helped build a trusted online presence for a skin and hair clinic through ads, branding, and local optimization.',
       project: 'Meta Ads, Google Ads, Logo, Poster Design, GMB, Social Media',
-      image: 'https://images.unsplash.com/photo-1588776814546-ec7ed8c1bffa?w=600&h=400&fit=crop',
+      chalanges:
+        'Making a medical brand approachable while complying with strict advertising rules.',
+      solution:
+        'Developed compliant yet engaging visuals and ad creatives that built patient trust.',
+      image:
+        'https://images.unsplash.com/photo-1588776814546-5486c0d1a632?w=600&h=400&fit=crop',
       results: {
-        visibility: '+250%',
-        engagement: '+180%',
-        inquiries: '+300%',
+        engagement: '+120%',
+        leads: '+80%',
       },
-      technologies: ['Meta Ads', 'Google Ads', 'Brand Design', 'SEO'],
+      technologies: ['Meta Ads', 'Google Ads', 'Brand Design'],
       link: '#',
     },
     {
@@ -47,181 +51,218 @@ export class PortfolioComponent {
       category: 'social-media',
       client: 'Mr. Divyaanand',
       description:
-        'We managed and optimized G Tec Kalpetta’s social media presence and ad campaigns, resulting in significant engagement growth.',
-      project: 'Social Media Handling, Meta & Google Ads, GMB',
-      image: 'https://images.unsplash.com/photo-1611162616305-4c88f0eb7a1d?w=600&h=400&fit=crop',
+        'Boosted student engagement and visibility for a local education brand.',
+      project: 'Social Media, Ads, GMB',
+      chalanges: 'Standing out in a highly competitive local education market.',
+      solution:
+        'Launched creative campaigns and relatable content to connect with students locally.',
+      image:
+        'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop',
       results: {
-        reach: '+200%',
-        followers: '+120%',
-        engagement: '+160%',
+        followers: '+300%',
+        inquiries: '+150%',
       },
-      technologies: ['Meta Ads', 'Google Ads', 'Social Strategy'],
+      technologies: ['Facebook Ads', 'GMB', 'Canva'],
       link: '#',
     },
     {
       id: 3,
       title: 'Health Gloss Legal Service',
-      category: 'web-development',
+      category: 'marketing',
       client: 'Ms. Renuka – USA',
       description:
-        'Created a professional website with SEO optimization and GMB integration to strengthen their digital footprint across the U.S. market.',
+        'Created a professional and credible website for U.S.-based legal clients.',
       project: 'Website, SEO, GMB',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop',
+      chalanges: 'Adapting brand tone and design for the U.S. legal market.',
+      solution:
+        'Developed SEO-friendly content and a modern interface reflecting trust and expertise.',
+      image:
+        'https://images.unsplash.com/photo-1521790797524-b2497295b8a0?w=600&h=400&fit=crop',
       results: {
-        visibility: '+300%',
-        authority: '+200%',
-        traffic: '+350%',
+        organicTraffic: '+180%',
+        conversions: '+90%',
       },
-      technologies: ['WordPress', 'SEO', 'GMB'],
+      technologies: ['SEO', 'Angular', 'Content Strategy'],
       link: '#',
     },
     {
-      id: 4,
+      id: 16,
       title: 'Vythiri Greens & DJ Medavos Resorts',
-      category: 'web-development',
-      client: 'Mr. Lijin – Calicut',
+      category: 'marketing',
+      client: 'Mr. Lijin – Vythiri, Wayanad',
       description:
-        'Developed and optimized multiple resort websites, applying advanced SEO and digital ad strategies to attract travelers effectively.',
+        'Developed websites and marketing strategies for multiple resort properties.',
       project: 'Website, GMB, Ads, SEO',
-      image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=600&h=400&fit=crop',
+      chalanges: 'Maintaining unique identities for each resort under one brand.',
+      solution:
+        'Created distinct designs and localized SEO strategies for each property.',
+      image:
+        'https://images.unsplash.com/photo-1501117716987-c8e1ecb210d3?w=600&h=400&fit=crop',
       results: {
         bookings: '+220%',
-        visibility: '+250%',
-        reviews: '+190%',
+        brandAwareness: '+160%',
       },
-      technologies: ['Angular', 'SEO', 'Google Ads'],
+      technologies: ['SEO', 'GMB', 'Angular'],
       link: '#',
     },
     {
       id: 5,
       title: 'Bright Eduway & Exter Qatar',
-      category: 'education',
+      category: 'marketing',
       client: 'Mr. Kamal – Qatar',
       description:
-        'Delivered end-to-end digital marketing services — including SEO, content creation, and performance ads — for multiple education brands in Qatar.',
-      project: 'Website, SEO, Content, Meta & Google Ads, Poster & Video',
-      image: 'https://images.unsplash.com/photo-1581093588401-22c97e53f9a0?w=600&h=400&fit=crop',
+        'Built complete digital marketing systems for two educational brands in Qatar.',
+      project: 'Website, SEO, Ads, Posters, Video',
+      chalanges: 'Handling multilingual content and ad compliance across regions.',
+      solution:
+        'Localized marketing campaigns and optimized targeting to reach ideal audiences.',
+      image:
+        'https://images.unsplash.com/photo-1596496057060-7aa74a96d8d8?w=600&h=400&fit=crop',
       results: {
-        leads: '+400%',
-        ranking: '+35 positions',
-        awareness: '+270%',
+        leads: '+170%',
+        visibility: '+190%',
       },
-      technologies: ['Google Ads', 'Meta Ads', 'SEO', 'Video Editing'],
+      technologies: ['SEO', 'Google Ads', 'Video Editing'],
       link: '#',
     },
     {
       id: 6,
       title: 'Attamala Glass Bridge',
-      category: 'seo',
+      category: 'marketing',
       client: 'Mr. Niyas – Wayanad',
       description:
-        'Enhanced visibility through local SEO optimization and created engaging video shoots to highlight this iconic tourist attraction.',
+        'Enhanced the online visibility of a thrilling adventure attraction.',
       project: 'SEO, GMB, Video Shoot',
-      image: 'https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=600&h=400&fit=crop',
+      chalanges: 'Capturing the adventure experience authentically on camera.',
+      solution:
+        'Used drone videography and dynamic storytelling to convey excitement and trust.',
+      image:
+        'https://images.unsplash.com/photo-1583512603805-3cc6b9e8c9e1?w=600&h=400&fit=crop',
       results: {
-        visitors: '+350%',
-        engagement: '+200%',
-        searchRanking: 'Top 3 on Google',
+        engagement: '+250%',
+        tourists: '+180%',
       },
-      technologies: ['SEO', 'GMB', 'Video Production'],
+      technologies: ['SEO', 'Video Production', 'GMB'],
       link: '#',
     },
     {
       id: 7,
-      title: 'La Meta Spices',
-      category: 'branding',
-      client: 'Mr. Niyas – Wayanad',
+      title: 'Soli Restaurant',
+      category: 'marketing',
+      client: 'Mr. Shamil – Qatar',
       description:
-        'Developed a unique brand identity and created ad visuals that reflect the premium nature of this spice brand.',
-      project: 'Logo Design, Ads',
-      image: 'https://images.unsplash.com/photo-1605969826743-610e91b2a0d8?w=600&h=400&fit=crop',
+        'Launched a strong visual identity for a new restaurant brand.',
+      project: 'Logo & Ads',
+      chalanges: 'Standing out in a crowded restaurant market.',
+      solution:
+        'Created teaser ads, branding assets, and identity-driven ad campaigns.',
+      image:
+        'https://images.unsplash.com/photo-1555992336-cbfad6e7a3b2?w=600&h=400&fit=crop',
       results: {
-        brandAwareness: '+180%',
-        reach: '+220%',
+        brandReach: '+210%',
+        sales: '+120%',
       },
-      technologies: ['Brand Design', 'Meta Ads'],
+      technologies: ['Brand Design', 'Meta Ads', 'Illustrator'],
       link: '#',
     },
     {
       id: 8,
-      title: 'Soli Restaurant Qatar',
-      category: 'branding',
-      client: 'Mr. Shamil – Qatar',
-      description:
-        'Designed creative ad materials and developed a brand identity for a new dining experience in Qatar.',
-      project: 'Logo Design, Ads',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=400&fit=crop',
+      title: 'Ammathi Dive Centre',
+      category: 'marketing',
+      client: 'Mr. Shemeer – Lakshadweep',
+      description: 'Promoted diving experiences through visual storytelling.',
+      project: 'Video, Poster, Ads',
+      chalanges: 'Filming underwater in challenging environmental conditions.',
+      solution:
+        'Used professional underwater gear and dynamic editing to capture the experience.',
+      image:
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop',
       results: {
-        openingWeekVisitors: '2K+',
-        engagement: '+180%',
+        videoViews: '+300%',
+        inquiries: '+200%',
       },
-      technologies: ['Photoshop', 'Meta Ads', 'Branding'],
+      technologies: ['Video Editing', 'Ads', 'Canva'],
       link: '#',
     },
     {
       id: 9,
-      title: 'Assist Health',
-      category: 'medical-marketing',
-      client: 'Dr. Vasu – Bangalore',
+      title: 'Oraina',
+      category: 'marketing',
+      client: 'Mr. Shahir – Dubai',
       description:
-        'Created visually impactful poster designs and ad creatives for healthcare promotion across social media and print.',
-      project: 'Poster Design, Ads',
-      image: 'https://images.unsplash.com/photo-1588774069160-3b6c3e8f270b?w=600&h=400&fit=crop',
+        'Crafted a clean, minimal, and luxurious logo design for a premium brand.',
+      project: 'Logo Design',
+      chalanges: 'Creating a premium look while maintaining simplicity.',
+      solution:
+        'Used minimal design principles and elegant colors for timeless appeal.',
+      image:
+        'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=600&h=400&fit=crop',
       results: {
-        reach: '+200%',
-        inquiries: '+160%',
+        impressions: '+150%',
+        brandRecognition: '+100%',
       },
-      technologies: ['Canva', 'Meta Ads', 'Creative Design'],
+      technologies: ['Illustrator', 'Photoshop', 'Brand Identity'],
       link: '#',
     },
     {
       id: 10,
       title: 'Gava Erixmar Group',
-      category: 'corporate',
-      client:
-        'Mr. Shemeer – Gava Erixmar Group (Sahhim Trading, In4 Logistics, Titan Oilfield, etc.)',
+      category: 'marketing',
+      client: 'Mr. Shemeer – Gava Erixmar Group',
       description:
-        'Provided a full digital suite — including logo design, SEO, website, and ad campaigns — across multiple global trading and logistics companies.',
+        'Handled complete marketing for a corporate group with 8 sub-brands.',
       project: 'Logo, Ads, SEO, Website, Posters, GMB',
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
+      chalanges:
+        'Maintaining individual brand identities while ensuring group cohesion.',
+      solution:
+        'Implemented a unified design system and synchronized marketing strategies across all brands.',
+      image:
+        'https://images.unsplash.com/photo-1581093588401-22d3d5a3efb8?w=600&h=400&fit=crop',
       results: {
-        visibility: '+320%',
-        leads: '+250%',
-        engagement: '+210%',
+        networkGrowth: '+180%',
+        efficiency: '+130%',
       },
-      technologies: ['SEO', 'Web Design', 'Ads', 'GMB'],
-      link: '#',
-    },
-    {
-      id: 11,
-      title: 'Ree Krishna Nursing College',
-      category: 'seo',
-      client: 'Mr. Manoj – Thrissur',
-      description:
-        'Boosted local search presence and optimized their Google Business profile to attract more student inquiries.',
-      project: 'GMB, SEO',
-      image: 'https://images.unsplash.com/photo-1584697964403-355c1f44f9e6?w=600&h=400&fit=crop',
-      results: {
-        ranking: 'Top 5',
-        inquiries: '+180%',
-      },
-      technologies: ['Local SEO', 'Google My Business'],
+      technologies: ['SEO', 'Angular', 'Meta Ads'],
       link: '#',
     },
     {
       id: 12,
       title: 'Bee Connect',
-      category: 'branding',
+      category: 'web-development',
       client: 'Mr. Jossen – Bangalore',
       description:
         'Developed a clean and modern website, with logo and poster design for strong brand consistency across digital touchpoints.',
       project: 'Website, Logo, Posters, GMB',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+      chalanges: 'Ensuring cohesive branding across multiple digital assets.',
+      solution:
+        'Designed unified brand visuals and optimized GMB listings for improved reach.',
+      image:
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
       results: {
         engagement: '+150%',
         visitors: '+200%',
       },
       technologies: ['Angular', 'GMB', 'Brand Identity'],
+      link: '#',
+    },
+    {
+      id: 13,
+      title: 'ClearGo Deep Cleaning Services',
+      category: 'web-development',
+      client: 'ClearGo – Calicut',
+      description:
+        'Designed and developed a professional service website for ClearGo, a Calicut-based deep cleaning company. The website highlights their services, booking options, and client trust with a modern, SEO-optimized design.',
+      project: 'Website, SEO, GMB Optimization, Content & Design',
+      chalanges:
+        'Building trust and visibility for a new local cleaning service in a competitive market.',
+      solution:
+        'Created a clean, responsive website focused on service clarity and strong visuals. Optimized Google Business Profile and SEO content to drive local inquiries and conversions.',
+      image: 'assets/images/web.png',
+      results: {
+        traffic: '+180%',
+        inquiries: '+220%',
+      },
+      technologies: ['Angular', 'SEO', 'GMB', 'Content Strategy'],
       link: '#',
     },
   ];

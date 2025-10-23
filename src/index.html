@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- ✅ Google tag (GA4) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-58DP0EDGLF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,10 +30,56 @@
     gtag('js', new Date());
     gtag('config', 'G-58DP0EDGLF');
   </script>
+
+  <!-- Simple Loader Styles -->
+  <style>
+    #app-loader {
+      position: fixed;
+      inset: 0;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+
+    #app-loader img {
+      width: 70px;
+      height: 70px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div id="app-loader">
+    <img src="assets/images/Bytrix-04.png" alt="Bytrix Hub Logo" />
+    <p style="color:#444;margin-top:10px;font-weight:500;">Bytrix Hub...</p>
+  </div>
+
   <app-root></app-root>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('app-loader');
+      if (loader) loader.style.display = 'none';
+    });
+  </script>
 </body>
 
 </html>

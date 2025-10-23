@@ -37,7 +37,7 @@ export class PortfolioComponent {
       solution:
         'Developed compliant yet engaging visuals and ad creatives that built patient trust.',
       image:
-        'https://www.mythilimanthra.com/img/about/1.png?w=600&h=400&fit=crop',
+        'https://d2ki7eiqd260sq.cloudfront.net/Filler_HR-12-1-f3a7b1fe-b6bc-4e67-97a8-dec051d15223.jpg',
       results: {
         engagement: '+120%',
         leads: '+80%',

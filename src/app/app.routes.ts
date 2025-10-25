@@ -10,5 +10,5 @@ export const routes: Routes = [
   { path: 'news', loadComponent: () => import('./components/news/news.component').then(m => m.NewsComponent) },
   { path: 'contact', loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent) },
   { path: 'tasks', loadComponent: () => import('./components/task-manager/task-manager.component').then(m => m.TaskManagerComponent) },
-  { path: '**', redirectTo: '' }
+  { path: '**', loadComponent: () => import('./components/page/not-found/not-found.component').then(m => m.NotFoundComponent) },
 ];

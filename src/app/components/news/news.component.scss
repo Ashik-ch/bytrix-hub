@@ -1,0 +1,10 @@
+/* Futuristic Glass Shine */
+:host {
+  display: block;
+}
+
+.group:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}

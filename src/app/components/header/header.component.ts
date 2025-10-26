@@ -19,4 +19,14 @@ export class HeaderComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+  navLinks = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'Services', path: '/services' },
+    { label: 'Portfolio', path: '/portfolio' },
+    { label: 'Blog', path: '/blog' },
+    { label: 'News', path: '/news' },
+    { label: 'Contact', path: '/contact' },
+  ];
+
 }

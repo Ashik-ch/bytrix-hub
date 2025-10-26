@@ -1,47 +1,24 @@
-<header class="bg-white shadow-lg sticky top-0 z-50">
+<header class="bg-white/70 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-gray-100">
   <nav class="container-custom">
     <div class="flex justify-between items-center py-4">
       <!-- Logo -->
-      <div class="flex">
-        <img src="assets/images/Bytrix-04.png" alt="logo" class="w-8 h-8 mr-2">
-        <a routerLink="/" class="text-2xl font-bold gradient-text">
+      <div class="flex items-center space-x-2">
+        <img src="assets/images/Bytrix-04.png" alt="Bytrix Hub Logo" class="w-9 h-9 drop-shadow-md" />
+        <a routerLink="/" class="text-2xl font-bold gradient-text tracking-tight">
           Bytrix Hub
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a routerLink="/" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Home
-        </a>
-        <a routerLink="/about" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          About Us
-        </a>
-        <a routerLink="/services" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Service
-        </a>
-        <a routerLink="/portfolio" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Portfolio
-        </a>
-        <a routerLink="/blog" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Blog
-        </a>
-        <a routerLink="/news" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          News
-        </a>
-        <a routerLink="/contact" routerLinkActive="text-primary-600"
-          class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Contacts
+        <a *ngFor="let link of navLinks" [routerLink]="link.path"
+          routerLinkActive="text-primary-600 border-b-2 border-primary-600"
+          class="text-gray-700 hover:text-primary-600 transition-all duration-300 font-medium">
+          {{ link.label }}
         </a>
       </div>
 
-      <!-- Mobile menu button -->
+      <!-- Mobile Menu Button -->
       <div class="md:hidden">
         <button (click)="toggleMenu()"
           class="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600">
@@ -56,34 +33,11 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div *ngIf="isMenuOpen" class="md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-        <a routerLink="/" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Home
-        </a>
-        <a routerLink="/about" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          About
-        </a>
-        <a routerLink="/services" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Services
-        </a>
-        <a routerLink="/portfolio" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Portfolio
-        </a>
-        <a routerLink="/blog" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Blog
-        </a>
-        <a routerLink="/contact" (click)="closeMenu()"
-          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium">
-          Contact
-        </a>
-        <a routerLink="/contact" (click)="closeMenu()" class="block px-3 py-2 btn-primary text-center">
-          Get Free Consultation
+    <div *ngIf="isMenuOpen" class="md:hidden bg-white/80 backdrop-blur-lg border-t border-gray-200">
+      <div class="px-4 py-3 space-y-2">
+        <a *ngFor="let link of navLinks" [routerLink]="link.path" (click)="closeMenu()"
+          class="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-all duration-300 font-medium">
+          {{ link.label }}
         </a>
       </div>
     </div>

@@ -120,7 +120,7 @@ export class PortfolioComponent {
         leads: '+170%',
         visibility: '+190%',
       },
-      technologies: ['SEO', 'Google Ads', 'Video Editing'],
+      technologies: ['SEO', 'Meta Ads', 'Google Ads', 'Video Editing'],
       link: '#',
     },
     {

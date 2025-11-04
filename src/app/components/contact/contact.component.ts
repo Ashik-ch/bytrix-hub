@@ -20,7 +20,7 @@ export class ContactComponent {
   };
 
   services = [
-    'SEO & Google Ads',
+    'SEO, Meta Ads, Google Ads',
     'Social Media Marketing',
     'Creative Services',
     'Web & App Development',
@@ -148,7 +148,7 @@ Message: ${this.contactForm.message || 'Please contact me for more information.'
     {
       question: 'What services do you offer?',
       answer:
-        'We offer end-to-end digital solutions including SEO, Google Ads, Social Media Marketing, Creative Design, Web & App Development, Local Business Growth, and Personal Branding.',
+        'We offer end-to-end digital solutions including SEO, Meta, Google Ads, Social Media Marketing, Creative Design, Web & App Development, Local Business Growth, and Personal Branding.',
     },
     {
       question: 'How long does it take to see results from SEO?',

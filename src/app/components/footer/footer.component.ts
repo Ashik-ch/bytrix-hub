@@ -31,7 +31,7 @@ export class FooterComponent {
   ];
 
   services = [
-    { name: 'SEO & Google Ads', route: '/services' },
+    { name: 'SEO, Meta Ads, Google Ads', route: '/services' },
     { name: 'Social Media Marketing', route: '/services' },
     { name: 'Creative Services', route: '/services' },
     { name: 'Web & App Development', route: '/services' },

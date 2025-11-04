@@ -14,7 +14,7 @@ export class ServicesComponent {
     {
       id: 'seo-google-ads',
       icon: 'fas fa-search',
-      title: 'SEO & Google Ads',
+      title: 'SEO, Meta Ads, Google Ads',
       subtitle: 'Boost Your Online Visibility',
       description: 'Comprehensive search engine optimization and pay-per-click advertising to increase your online presence and drive qualified traffic to your website.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
@@ -23,11 +23,6 @@ export class ServicesComponent {
           title: 'On-page SEO',
           description: 'Optimize your website content, meta tags, and structure for better search rankings.',
           icon: 'fas fa-file-alt'
-        },
-        {
-          title: 'Off-page SEO',
-          description: 'Build high-quality backlinks and improve your domain authority.',
-          icon: 'fas fa-link'
         },
         {
           title: 'Technical SEO',

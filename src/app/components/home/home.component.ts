@@ -17,7 +17,7 @@ export class HomeComponent {
   services = [
     {
       icon: 'fas fa-search',
-      title: 'SEO & Google Ads',
+      title: 'SEO, Meta & Google Ads',
       description: 'Boost your online visibility with our comprehensive SEO strategies and targeted Google Ads campaigns.',
       features: ['On-page SEO', 'Off-page SEO', 'Technical SEO', 'PPC Management']
     },

@@ -24,7 +24,7 @@ export class AdminLoginComponent {
   onLogin() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-      if (username === 'admin' && password === '12345') {
+      if (username === 'admin' && password === 'navasjan') {
         this.isLoggedEventIn.emit(true);
         this.loginError = '';
       } else {

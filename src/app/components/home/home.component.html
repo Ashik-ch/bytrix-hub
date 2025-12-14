@@ -60,32 +60,13 @@
 <!-- <app-stats></app-stats> -->
 
 <section class="relative py-12 bg-[url('assets/images/bg11.jpg')] bg-cover bg-center overflow-hidden">
-  <div class="container mx-auto text-center px-4">
-    <div class="relative mb-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-white  mb-4 tracking-tight">
-        Explore Our Expertise
-      </h2>
-      <p class="text-gray-50 text-lg md:text-xl max-w-2xl mx-auto">
-        Transform your business with innovative digital solutions crafted for results and growth.
-      </p>
-      <div
-        class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-[2px] bg-gradient-to-r from-primary-500 to-indigo-400 rounded-full blur-sm">
-      </div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-5 mb-8 animate__animated animate__fadeInUp animate__delay-1s">
-      <button *ngFor="let o of offer" class="relative group px-8 py-4 rounded-2xl font-semibold text-gray-800 bg-white/70 backdrop-blur-xl border border-gray-300/50 shadow-md
-               hover:bg-gradient-to-r hover:from-primary-500/90 hover:to-indigo-500/90 hover:text-white
-               transition-all duration-500 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/30">
-        <span class="relative z-10">{{ o }}</span>
-        <div
-          class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary-500 to-indigo-500 blur-md transition duration-500">
-        </div>
-      </button>
-    </div>
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary-300/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-72 h-72 bg-indigo-400/20 rounded-full blur-3xl"></div>
-
+  <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+    <button *ngFor="let o of offer"
+      class="srelative group px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg font-semibold text-white bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg shadow-black/20 transition-all duration-300 md:hover:-translate-y-1 md:hover:bg-gradient-to-r md:hover:from-primary-500 md:hover:to-indigo-500 md:hover:shadow-primary-500/40 ">
+      <span class="relative z-10 tracking-wide"> {{ o }} </span>
+    </button>
   </div>
+
 </section>
 
 <!-- Services Overview Section -->

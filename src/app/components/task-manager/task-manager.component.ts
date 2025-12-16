@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 interface TaskItem {
   id: number;
@@ -26,7 +27,8 @@ export class TaskManagerComponent implements OnInit {
   taskItems: TaskItem[] = [];
   taskForm: FormGroup;
   today = new Date().toISOString().split('T')[0];
-  constructor(private fb: FormBuilder,) {
+  constructor(private fb: FormBuilder,
+    private firebaseService: FirebaseService) {
     this.taskForm = this.fb.group({
       taskName: ['', Validators.required],
       startDate: ['', Validators.required],
@@ -41,33 +43,23 @@ export class TaskManagerComponent implements OnInit {
     this.fetchTasks();
   }
 
-  private apiUrl = "https://script.google.com/macros/s/AKfycbxMnCXjiWmrZxT_785Cj1uguMnCdwnsXLdjSKdN6nrI4u9gIfcTTQ0iAlqEHHeUV-anww/exec";
-
   fetchTasks() {
-    fetch(this.apiUrl)
-      .then(res => res.json())
-      .then(data => {
-        this.taskItems = data;
-      });
+    this.firebaseService.getTasks().subscribe(data => {
+      console.log('Tasks:', data);
+      this.taskItems = data;
+    });
   }
 
   onSubmit() {
     if (this.taskForm.valid) {
-      const newTask: TaskItem = {
-        id: this.taskItems.length + 1,
-        ...this.taskForm.value
-      };
 
-      fetch(this.apiUrl, {
-        method: "POST",
-        body: JSON.stringify(newTask),
-        headers: { "Content-Type": "application/json" }
-      })
-        .then(res => res.json())
-        .then(() => {
-          this.taskItems.push(newTask);
+      this.firebaseService.addTask(this.taskForm.value)
+        .then((data: any) => {
+          console.log('data:', data);
+          alert('Project saved successfully!');
           this.taskForm.reset();
-        });
+        })
+        .catch(err => console.error(err));
     }
     this.taskForm.reset();
   }
@@ -95,4 +87,3 @@ export class TaskManagerComponent implements OnInit {
     this.loginError = '';
   }
 }
-

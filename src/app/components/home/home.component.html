@@ -59,16 +59,27 @@
 
 <!-- <app-stats></app-stats> -->
 
-<section
-  class="relative py-12 bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20240104/pngtree-mystic-blackberry-a-textured-design-on-an-abstract-dark-purple-background-image_13879614.png')] bg-cover bg-center overflow-hidden">
-  <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
-    <button *ngFor="let o of offer"
-      class="srelative group px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base md:text-lg font-semibold text-white bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg shadow-black/20 transition-all duration-300 md:hover:-translate-y-1 md:hover:bg-gradient-to-r md:hover:from-primary-500 md:hover:to-indigo-500 md:hover:shadow-primary-500/40 ">
-      <span class="relative z-10 tracking-wide"> {{ o }} </span>
+<section class="relative py-8 sm:py-12 
+         bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20240104/pngtree-mystic-blackberry-a-textured-design-on-an-abstract-dark-purple-background-image_13879614.png')] 
+         bg-cover bg-center overflow-hidden">
+
+  <div class="flex sm:flex-wrap gap-3 px-4 sm:px-0  snap-x snap-mandatory overflow-x-auto
+           overflow-x-auto sm:overflow-visible scrollbar-hide justify-start sm:justify-center">
+
+    <button *ngFor="let o of offer" class="relative group shrink-0
+             px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg sm:rounded-2xl text-sm sm:text-base md:text-lg font-medium sm:font-semibold
+             text-white bg-white/10 backdrop-blur-md border border-white/15
+             shadow-md sm:shadow-lg transition-all duration-300
+             active:scale-95 md:hover:-translate-y-1
+             md:hover:bg-gradient-to-r md:hover:from-primary-500
+             md:hover:to-indigo-500 md:hover:shadow-primary-500/40">
+      <span class="relative z-10 whitespace-nowrap tracking-wide">
+        {{ o }} </span>
     </button>
   </div>
 
 </section>
+
 
 <!-- Services Overview Section -->
 <section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">

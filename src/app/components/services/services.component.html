@@ -25,10 +25,13 @@
     </div>
 
     <!-- Service Tabs -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <button *ngFor="let service of services" (click)="selectService(service)"
-        [class]="selectedService.id === service.id ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-        class="px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-3 sm:px-0">
+      <button *ngFor="let service of services" (click)="selectService(service)" [ngClass]="
+      selectedService.id === service.id
+        ? 'bg-primary-600 text-white shadow-md'
+        : 'bg-gray-100 text-gray-700'
+    " class="px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base font-medium whitespace-nowrap transition-all duration-200 active:scale-95
+           hover:bg-gray-200">
         {{ service.title }}
       </button>
     </div>

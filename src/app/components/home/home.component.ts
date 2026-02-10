@@ -64,7 +64,8 @@ export class HomeComponent {
     'Luxury / Lifestyle / Brand',
     'Nutrition / Health Products',
     'Logistics & Trading / Conglomerate',
-    'Technology / Digital Branding & Service'
+    'Technology / Digital Branding',
+    'Real Estate / Infrastructure',
   ];
 
 

@@ -24,7 +24,7 @@
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-white">📋 Tasks / Projects</h2>
         <span class="text-sm text-gray-300">
-          <span class="pi pi-file-excel">
+          <span class="fa-solid fa-file-excel text-green-400">
             <a href="https://docs.google.com/spreadsheets/d/1Kyhu8jYOwnpFXciPpF98rJU_yhfzn_ltKTtzovF8FN0/edit?usp=sharing"
               class="curspr-pointer">📩</a></span>
           {{ taskItems.length }} total</span>
@@ -54,10 +54,10 @@
               <td class="px-6 py-4 max-w-xs truncate text-gray-300">{{ task.notes }}</td>
               <td class="px-6 py-4 text-center space-x-3">
                 <button (click)="editTask(task)" class="text-blue-400 hover:text-blue-300 transition-colors">
-                  <i class="pi pi-pencil"></i>P
+                  <i class="fa-solid fa-pen-to-square"></i>
                 </button>
                 <button (click)="deleteTask(task.id)" class="text-red-400 hover:text-red-300 transition-colors">
-                  <i class="pi pi-trash"></i> D
+                  <i class="fa-solid fa-trash"></i>
                 </button>
               </td>
             </tr>

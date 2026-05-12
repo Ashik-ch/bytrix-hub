@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FirebaseService } from 'src/app/services/firebase.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-project-form',
@@ -19,12 +19,12 @@ export class ProjectFormComponent {
     notes: ['']
   });
 
-  constructor(private fb: FormBuilder, private firebaseService: FirebaseService) { }
+  constructor(private fb: FormBuilder, private dataService: DataService) { }
 
   submit() {
     if (this.form.valid) {
       console.log('Project Data:', this.form.value);
-      this.firebaseService.addProject(this.form.value)
+      this.dataService.addProject(this.form.value)
         .then((data: any) => {
           this.form.reset({ status: 'Pending' });
         })
@@ -33,7 +33,7 @@ export class ProjectFormComponent {
   }
 
   getData() {
-    this.firebaseService.getProjects().subscribe(data => {
+    this.dataService.getProjects().subscribe(data => {
       console.log('Projects:', data);
     });
   }

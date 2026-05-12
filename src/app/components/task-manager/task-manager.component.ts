@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
-import { FirebaseService } from 'src/app/services/firebase.service';
+import { DataService } from 'src/app/services/data.service';
 
 interface TaskItem {
   id: number;
@@ -28,7 +28,7 @@ export class TaskManagerComponent implements OnInit {
   taskForm: FormGroup;
   today = new Date().toISOString().split('T')[0];
   constructor(private fb: FormBuilder,
-    private firebaseService: FirebaseService) {
+    private dataService: DataService) {
     this.taskForm = this.fb.group({
       taskName: ['', Validators.required],
       startDate: ['', Validators.required],
@@ -44,7 +44,7 @@ export class TaskManagerComponent implements OnInit {
   }
 
   fetchTasks() {
-    this.firebaseService.getTasks().subscribe(data => {
+    this.dataService.getTasks().subscribe(data => {
       console.log('Tasks:', data);
       this.taskItems = data;
     });
@@ -53,7 +53,7 @@ export class TaskManagerComponent implements OnInit {
   onSubmit() {
     if (this.taskForm.valid) {
 
-      this.firebaseService.addTask(this.taskForm.value)
+      this.dataService.addTask(this.taskForm.value)
         .then((data: any) => {
           console.log('data:', data);
           alert('Project saved successfully!');

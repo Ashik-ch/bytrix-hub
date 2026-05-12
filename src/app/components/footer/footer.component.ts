@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import packageInfo from '../../../../package.json';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
+  version: string = packageInfo.version;
 
   socialLinks = [
     { name: 'Facebook', icon: 'fab fa-facebook-f', url: 'http://facebook.com/people/Bytrixhub/61582213150314/', color: '#1877F2' },

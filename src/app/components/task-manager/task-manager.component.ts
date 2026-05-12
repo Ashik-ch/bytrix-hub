@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
-import { DataService } from 'src/app/services/data.service';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 interface TaskItem {
   id: number;
@@ -24,11 +24,13 @@ interface TaskItem {
 export class TaskManagerComponent implements OnInit {
   isLoggedIn = false;
   loginError = '';
-  taskItems: TaskItem[] = [];
+  taskItems: any[] = [];
   taskForm: FormGroup;
+  editingTaskId: string | null = null;
+  isEditing = false;
   today = new Date().toISOString().split('T')[0];
   constructor(private fb: FormBuilder,
-    private dataService: DataService) {
+    private firebaseService: FirebaseService) {
     this.taskForm = this.fb.group({
       taskName: ['', Validators.required],
       startDate: ['', Validators.required],
@@ -44,23 +46,65 @@ export class TaskManagerComponent implements OnInit {
   }
 
   fetchTasks() {
-    this.dataService.getTasks().subscribe(data => {
-      console.log('Tasks:', data);
-      this.taskItems = data;
+    this.firebaseService.getTasks().subscribe({
+      next: (data) => {
+        console.log('Received Tasks:', data);
+        this.taskItems = data;
+        console.log('TaskItems length:', this.taskItems.length);
+      },
+      error: (err) => {
+        console.error('Error fetching tasks:', err);
+        alert('Error fetching tasks. Check console for details.');
+      }
     });
   }
 
   onSubmit() {
     if (this.taskForm.valid) {
-
-      this.dataService.addTask(this.taskForm.value)
-        .then((data: any) => {
-          console.log('data:', data);
-          alert('Project saved successfully!');
-          this.taskForm.reset();
-        })
-        .catch(err => console.error(err));
+      if (this.isEditing && this.editingTaskId) {
+        this.firebaseService.updateTask(this.editingTaskId, this.taskForm.value)
+          .then(() => {
+            alert('Task updated successfully!');
+            this.resetForm();
+          })
+          .catch(err => console.error(err));
+      } else {
+        this.firebaseService.addTask(this.taskForm.value)
+          .then(() => {
+            alert('Task saved successfully!');
+            this.resetForm();
+          })
+          .catch(err => console.error(err));
+      }
     }
+  }
+
+  editTask(task: any) {
+    this.isEditing = true;
+    this.editingTaskId = task.id;
+    this.taskForm.patchValue({
+      taskName: task.taskName,
+      startDate: task.startDate,
+      deadline: task.deadline,
+      assignee: task.assignee,
+      clientName: task.clientName,
+      notes: task.notes
+    });
+    // Scroll to form
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  deleteTask(id: string) {
+    if (confirm('Are you sure you want to delete this task?')) {
+      this.firebaseService.deleteTask(id)
+        .then(() => alert('Task deleted successfully!'))
+        .catch((err: any) => console.error(err));
+    }
+  }
+
+  resetForm() {
+    this.isEditing = false;
+    this.editingTaskId = null;
     this.taskForm.reset();
   }
 

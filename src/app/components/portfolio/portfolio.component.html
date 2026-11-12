@@ -40,7 +40,10 @@
         <!-- Project Image -->
         <div class="relative overflow-hidden">
           <img [src]="project.image" [alt]="project.title"
-            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+            loading="lazy" decoding="async"
+            [class.object-contain]="project.image.startsWith('assets/images/portfolio/')"
+            [class.object-cover]="!project.image.startsWith('assets/images/portfolio/')"
+            class="w-full h-64 bg-gray-50 transition-transform duration-500 hover:scale-110">
           <div
             class="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <!-- <a [href]="project.link"
@@ -59,6 +62,9 @@
 
           <h3 class="text-xl font-bold text-gray-900 mb-3">{{ project.title }}</h3>
           <p class="text-gray-600 mb-4">{{ project.description }}</p>
+          <p *ngIf="project.period" class="text-sm text-gray-500 mb-4">
+            <span class="font-medium">Period:</span> {{ project.period }}
+          </p>
 
           <!-- Results -->
           <!-- <div class="grid grid-cols-3 gap-4 mb-4">
@@ -69,12 +75,18 @@
           </div> -->
 
           <!-- Technologies -->
-          <div class="flex flex-wrap gap-2" *ngIf="project.category=='web-development'">
+          <div class="flex flex-wrap gap-2" *ngIf="project.category === 'web-development' && project.technologies.length">
             <span *ngFor="let tech of project.technologies"
               class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
               {{ tech }}
             </span>
           </div>
+          <a *ngIf="project.category === 'web-development' && project.link !== '#'"
+            [href]="project.link" target="_blank" rel="noopener noreferrer"
+            [attr.aria-label]="'Visit ' + project.title + ' website (opens in a new tab)'"
+            class="inline-block mt-5 text-primary-600 font-semibold hover:underline">
+            Visit Website <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
     </div>

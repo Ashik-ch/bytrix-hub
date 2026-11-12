@@ -260,6 +260,66 @@ export class PortfolioComponent {
       technologies: ['Angular', 'SEO', 'GMB', 'Content Strategy'],
       link: '#',
     },
+    {
+      id: 14,
+      title: 'G-TEC Mahe',
+      category: 'web-development',
+      client: 'G-TEC Mahe',
+      description:
+        'Education website featuring courses, placements, campus life, and enquiries.',
+      image: 'assets/images/portfolio/gtec-mahe.jpg',
+      technologies: [],
+      period: 'Ongoing',
+      link: 'https://gtecmahe.com/',
+    },
+    {
+      id: 15,
+      title: 'Mythili Manthra',
+      category: 'web-development',
+      client: 'Mythili Manthra',
+      description:
+        'Clinic website covering skin and hair treatments, clinic information, and appointment enquiries.',
+      image: 'assets/images/portfolio/mythili-manthra.jpg',
+      technologies: [],
+      period: 'Oct 2025 – May 2026',
+      link: 'https://www.mythilimanthra.in/',
+    },
+    {
+      id: 16,
+      title: 'Health Gloss Legal Services',
+      category: 'web-development',
+      client: 'Health Gloss Legal Services',
+      description:
+        'Medical record review and litigation support website with consultations and sample report requests.',
+      image: 'assets/images/portfolio/health-gloss-legal-services.jpg',
+      technologies: [],
+      period: 'Apr 2025 – Feb 2026',
+      link: 'https://hglegalservices.com/',
+    },
+    {
+      id: 17,
+      title: 'Zain Tea Cafe',
+      category: 'web-development',
+      client: 'Zain Tea Cafe',
+      description:
+        'Responsive cafe website showcasing the menu, brand, and contact information.',
+      image: 'assets/images/portfolio/zain-tea-cafe.jpg',
+      technologies: ['React', 'Tailwind CSS', 'JavaScript'],
+      period: '2024',
+      link: 'https://zainteacafe.com/',
+    },
+    {
+      id: 18,
+      title: 'IDT Travel',
+      category: 'web-development',
+      client: 'IDT Travel',
+      description:
+        'Travel website featuring destinations, packages, and trip-planning information.',
+      image: 'assets/images/portfolio/idt-travel.jpg',
+      technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+      period: 'Aug 2024 – Jan 2026',
+      link: 'https://goidt.in/',
+    },
   ];
 
 
